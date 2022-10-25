@@ -47,7 +47,7 @@ int main()
 	string line;
 	int i_data=0;
 	ifstream fin_data("/mnt/ccnas2/bdp/zw4520/data2/cora.csv");
-	ifstream fin_beta("/mnt/ccnas2/bdp/zw4520/data2/beta0(1).csv");
+	ifstream fin_beta("/mnt/ccnas2/bdp/zw4520/data2/beta0.csv");
 	ifstream fin_row("/mnt/ccnas2/bdp/zw4520/data1/cora_row.csv");
 	ifstream fin_col("/mnt/ccnas2/bdp/zw4520/data1/cora_col.csv");
 
