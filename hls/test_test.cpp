@@ -12,7 +12,7 @@
 #include <sstream>
 #include <string>
 #include <vector>
-#include"ap_fixed.h"
+#include "ap_fixed.h"
 
 using namespace std;
 string Trim(string& str)
@@ -143,34 +143,8 @@ int main()
 		i_col=i_col+1;
 	}
 
-	cout <<col[0][0]<< endl;
-	cout <<col[0][1]<< endl;
-	cout <<col[0][2]<< endl;
-	cout <<col[0][3]<< endl;
-
-	cout <<row[0][0]<< endl;
-		cout <<row[0][1]<< endl;
-		cout <<row[0][2]<< endl;
-		cout <<row[0][3]<< endl;
-
-
-
-
-
-
-
-
-
-	cout <<out12[0]<< endl;
-	cout <<out12[1]<< endl;
-	cout <<out12[2]<< endl;
-
-
+	
 	TopFun(out11,data,beta,col,row,row1,out0);
-	//TopFun1(out10,data,beta,out0);
-
-
-
 
 
 	for (int i=0; i<node;i++)
@@ -184,35 +158,6 @@ int main()
 		}
 	}
 
-		cout <<temp_out1[7][2][5]<< endl;
-		cout <<temp_out1[7][1][5]<< endl;
-		cout <<temp_out1[7][0][5]<< endl;
-		cout <<temp_out1[8][2][5]<< endl;
-		cout <<temp_out1[8][1][5]<< endl;
-		cout <<temp_out1[8][0][5]<< endl;
-		cout <<temp_out1[9][2][5]<< endl;
-		cout <<temp_out1[9][1][5]<< endl;
-		cout <<temp_out1[9][0][5]<< endl;
-		cout <<temp_out1[8][0][2]<< endl;
-			cout <<temp_out1[9][2][3]<< endl;
-			cout <<temp_out1[9][1][4]<< endl;
-			cout <<temp_out1[9][0][1]<< endl;
-			cout <<temp_out1[0][0][0]<< endl;
-			cout <<temp_out1[1][0][0]<< endl;
-			cout <<temp_out1[1][1][0]<< endl;
-			cout <<temp_out1[2707][39][5]<< endl;
-			cout <<temp_out1[2707][40][5]<< endl;
-			cout <<temp_out1[2707][41][5]<< endl;
-			cout <<temp_out1[2707][42][5]<< endl;
-			cout <<out10[0]<< endl;
-			cout <<out11[0]<< endl;
-			cout <<out11[1]<< endl;
-			cout <<out11[2]<< endl;
-			cout <<out11[3]<< endl;
-			cout <<out11[4]<< endl;
-			cout <<out11[5]<< endl;
-			cout <<temp_out1[2][0][0]<< endl;
-			cout <<temp_out1[1000][40][5]<< endl;
-
+		
 
 }
