@@ -307,42 +307,27 @@ class BiGCN_layerspar(torch.nn.Module):
             if self.binarize1 :
                x = BinActive()(x) 
                
-            
-            
-            #model=torch.load("/mnt/ccnas2/bdp/zw4520/gcn/cora_4layer.pkl")  
-            #a=0
-            #weight0 = model.state_dict()['convs.0.lin.weight']                     
-            #for i in range(1432):
-            # if x[2707][i]*weight0[255][i] <0:
-             # a=a+1
-            #print(a)     
-             
-            begin=time.time()  
+ 
             if self.dropout2 == 'input' :    
                 if   i != 0 :                 
                  x = BernoulliDropout(self.dropout)(x)
-              
-            #print(x)
+  
             
                                      
             x = conv(x, edge_index)
             
-                                                           
-            #print(x)
-            
+           
             if binarize2 :
                if i!= self.layers-1: 
                  x = BinActive0()(x) 
-            #print(x)
+       
             x = self.convs1[i](x, edge_index) 
-            print(x)
+          
             if self.dropout2 == 'output' : 
                if   i != self.layers -1:                 
                   x = BernoulliDropout(self.dropout)(x) 
                                          
-            #end=time.time()
-            #print(end-begin)
-          
+   
             
         x.cpu()             
         return x
@@ -376,18 +361,17 @@ class BiGCN_layerspar(torch.nn.Module):
               
                if self.dropout2 == 'output' : 
                 if   i != self.layers -1: 
-                 #if i== num_layer:
-                  #x=torch.stack((x,x,x,x,x),dim=0)                                  
+                                          
                  x = BernoulliDropout(self.dropout)(x)  
                                                                                
                  
                end7=time.time()            
-               #print(end7-begin7)
+           
             
         begin_write=time.time()
         x.cpu() 
         end_write=time.time()
-        #print(end_write-begin_write)
+    
               
         return F.log_softmax(x, dim=1)
             
@@ -475,10 +459,10 @@ class NeighborSamplingGCN1(torch.nn.Module):
         self.convs1 = torch.nn.ModuleList()
         self.convs2 = torch.nn.ModuleList()
         
-        self.convs1.append(indBiGCNConv1(in_channels, hidden_channels,binarize=False))
-        self.convs1.append(indBiGCNConv1(hidden_channels, out_channels,binarize=False))
-        self.convs2.append(indBiGCNConv(in_channels, hidden_channels,binarize=False))       
-        self.convs2.append(indBiGCNConv(hidden_channels, out_channels,binarize=False))
+        self.convs1.append(indBiGCNConv1(in_channels, hidden_channels,binarize=Ture))
+        self.convs1.append(indBiGCNConv1(hidden_channels, out_channels,binarize=Ture))
+        self.convs2.append(indBiGCNConv(in_channels, hidden_channels,binarize=Ture))       
+        self.convs2.append(indBiGCNConv(hidden_channels, out_channels,binarize=Ture))
         self.reset_parameters()
 
     def reset_parameters(self):
@@ -488,12 +472,12 @@ class NeighborSamplingGCN1(torch.nn.Module):
     def forward(self, x, adjs):
 
         for i, (edge_index, _, size) in enumerate(adjs):
-            #print(i)
+           
             x_target = x[:size[1]]
             
-            #x = x - x.mean(dim=0, keepdim=True)
-            #x = x / (x.std(dim=0, keepdim=True) + 0.0001)
-            #x = BinActive()(x)
+            x = x - x.mean(dim=0, keepdim=True)
+            x = x / (x.std(dim=0, keepdim=True) + 0.0001)
+            x = BinActive()(x)
             
                    
             #x_target = x_target - x_target.mean(dim=0, keepdim=True)
@@ -504,8 +488,8 @@ class NeighborSamplingGCN1(torch.nn.Module):
            
             
             x = self.convs1[i](x,edge_index)
-            #if i != self.num_layers - 1:
-            #  x = BinActive0()(x)
+            if i != self.num_layers - 1:
+              x = BinActive0()(x)
             x = self.convs2[i]((x,x_target),edge_index)
             if i != self.num_layers - 1:
                 x = F.relu(x)
@@ -543,36 +527,33 @@ class NeighborSamplingGCN1(torch.nn.Module):
                  #  x=x
                 
                 x_target = x[:size[1]]
-                #load_end_time = time.time()
-                #load_time += load_end_time - load_begin_time
-                
-                #bin_begin_time = time.time()
-                #x = x - x.mean(dim=0, keepdim=True)
-                #x = x / (x.std(dim=0, keepdim=True) + 0.0001)
-                #x = BinActive()(x)
+               
+              
+                x = x - x.mean(dim=0, keepdim=True)
+                x = x / (x.std(dim=0, keepdim=True) + 0.0001)
+                x = BinActive()(x)
 
-                # bn x_target
-                #x_target = x_target - x_target.mean(dim=0, keepdim=True)
-                #x_target = x_target / (x_target.std(dim=0, keepdim=True) + 0.0001)
-                #x_target = BinActive()(x_target)
+                 bn x_target
+                x_target = x_target - x_target.mean(dim=0, keepdim=True)
+                x_target = x_target / (x_target.std(dim=0, keepdim=True) + 0.0001)
+                x_target = BinActive()(x_target)
                 
                 
                 
                 if i != 0:
-                   #x=torch.stack((x,x,x,x,x,x,x,x,x,x),dim=0)
-                   begin2=time.time()
+                   #x=torch.stack((x,x,x,x,x,x,x,x,x,x),dim=0
+                
                    x = BernoulliDropout(0.5)(x)
-                   end2=time.time()
-                   #print(end2-begin2)
+                  
+                  
 
                 conv_begin_time = time.time()
                 
                 begin1=time.time()
                 x = self.convs1[i](x, edge_index)
-                #if i != self.num_layers - 1:
-                  #x = x - x.mean(dim=1, keepdim=True)
-                  #x = x / (x.std(dim=1, keepdim=True) + 0.0001)
-                 # x = BinActive0()(x)
+                if i != self.num_layers - 1:
+              
+                  x = BinActive0()(x)
                   
         
                 x = self.convs2[i](x, edge_index) 
@@ -582,32 +563,16 @@ class NeighborSamplingGCN1(torch.nn.Module):
                         
                 if i != self.num_layers - 1:
                     
-                    x = F.relu(x) 
+                    x = F.relu(x)                     
+            
+                    #x = BernoulliDropout(0.5)(x)
                     
-                    
-                #    x = BernoulliDropout(0.5)(x)
-                    
-                    
-                    
-                conv_end_time = time.time()
-                conv_time += conv_end_time - conv_begin_time  
-                
-                begin3=time.time() 
+       
                 xs.append(x.cpu())
-                end3=time.time()
-                #print(end3-begin3)
+                
                                                                          
             x_all =  torch.cat(xs, dim=1)
-           
-             #print ("No. %d consumes %f s"%(i, layer_end_time - layer_begin_time))
-        #end_time = time.time()
-        #total_time = end_time - begin_time
-        #if return_lat:
-         #   return x_all, total_time, load_time, bin_active_time, conv_time 
-        #else:
         
-        #print(conv_time)
-        #print(cc) 
                   
         return  x_all
 
