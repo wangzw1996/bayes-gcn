@@ -8,8 +8,8 @@ pip install torch-scatter -f https://data.pyg.org/whl/torch-1.11.0+${CUDA}.html
 pip install torch-sparse -f https://data.pyg.org/whl/torch-1.11.0+${CUDA}.html
 pip install torch-geometric
 ```
-## 2. 
-### 2.1 
+## 2. Experiment Implementation
+### 2.1 Software Implementation
 Under python3.8 and PyTorch 11.1, 
 the sparsity exploration experiment can be done by executing the following commands for Cora, PubMed, and Flickr datasets, respectively.
 ```
@@ -19,7 +19,7 @@ python python/Flickr.py
 ```
 The result of the experiment are put under ```python/log/```.
 
-### 2.2
+### 2.2 FPGA Implementation
 To implement the FPGA design with HLS :   
 
 1. download the dataset from  ```hls/data```
