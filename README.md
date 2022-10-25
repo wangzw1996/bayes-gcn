@@ -1,5 +1,6 @@
 ## 1. Environment Setup
-Our experiment is implemented with Python 3.8 and pytorch11.1.   
+The software experiment is implemented with Python 3.8 and pytorch11.1.   
+The FPGA design is implemented Vitis HLS 2021.1
 PyTorch and related packages can be installed using the following command.
 ```
 conda install pytorch torchvision torchaudio cudatoolkit=11.1 -c pytorch
