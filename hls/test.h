@@ -23,7 +23,5 @@ typedef ap_uint<512> data_in;
 typedef ap_fixed<32,8> data_tt;
 
 
-void TopFun1(data_tt out10[node],data_bi in[node][1433], data_tt beta[node],data_out out[node][6]);
-void TOP(data_bi in[node][1433],data_tt beta[node],data_tt out[node],data_t out2[node]);
-void cc(hls::stream<data_in> stream_array[feature],data_t out[block][feature]);
+
 void TopFun(data_tt out11[block],data_bi in[node][1433], data_tt beta[node],data_t col[4][edge/4],data_t row[4][edge/4],data_t row1[4][edge/4],data_out out[node][6]);
