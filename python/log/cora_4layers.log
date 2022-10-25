@@ -1,0 +1,1324 @@
+Namespace(dataset='Cora', device='1', dropout=0.25, early_stopping=0, epochs=2000, exp_name='default_exp_name', hidden=256, layers=4, lr=0.001, runs=10, weight_decay=0.0005)
+Size of train set: 140
+Size of val set: 500
+Size of test set: 1000
+Num classes: 7
+Num features: 1433
+Create a 4-layered Bi-GCN.
+Layer 0, in_dim 1433, out_dim 256
+Layer 1, in_dim 256, out_dim 256
+Layer 2, in_dim 256, out_dim 256
+Layer 3, in_dim 256, out_dim 7
+Run: 1, dropout_rate: 0.5000,train_acc: 1.0000, val_acc: 0.6360, test_acc: 0.6800
+pavpu
+tensor([0.3240, 0.6890, 0.6930, 0.7060, 0.7090, 0.6950, 0.6920, 0.6890, 0.6810,
+        0.6780, 0.6770], dtype=torch.float64)
+Run: 2, dropout_rate: 0.5000,train_acc: 1.0000, val_acc: 0.7620, test_acc: 0.7790
+pavpu
+tensor([0.2210, 0.7170, 0.7600, 0.7910, 0.7900, 0.7950, 0.7990, 0.7910, 0.7860,
+        0.7790, 0.7800], dtype=torch.float64)
+Run: 3, dropout_rate: 0.5000,train_acc: 1.0000, val_acc: 0.7440, test_acc: 0.7740
+pavpu
+tensor([0.2270, 0.7010, 0.7670, 0.7840, 0.7930, 0.7960, 0.7920, 0.7850, 0.7810,
+        0.7730, 0.7740], dtype=torch.float64)
+Run: 4, dropout_rate: 0.5000,train_acc: 1.0000, val_acc: 0.7640, test_acc: 0.7610
+pavpu
+tensor([0.2380, 0.7000, 0.7480, 0.7580, 0.7660, 0.7650, 0.7610, 0.7570, 0.7600,
+        0.7660, 0.7630], dtype=torch.float64)
+Run: 5, dropout_rate: 0.5000,train_acc: 1.0000, val_acc: 0.7540, test_acc: 0.7660
+pavpu
+tensor([0.2340, 0.7230, 0.7840, 0.7910, 0.7960, 0.8040, 0.7990, 0.7930, 0.7780,
+        0.7710, 0.7670], dtype=torch.float64)
+Run: 6, dropout_rate: 0.5000,train_acc: 1.0000, val_acc: 0.7540, test_acc: 0.7750
+pavpu
+tensor([0.2240, 0.7230, 0.7710, 0.7890, 0.7780, 0.7900, 0.7930, 0.7860, 0.7790,
+        0.7780, 0.7770], dtype=torch.float64)
+Run: 7, dropout_rate: 0.5000,train_acc: 1.0000, val_acc: 0.7720, test_acc: 0.7870
+pavpu
+tensor([0.2100, 0.7000, 0.7520, 0.7610, 0.7720, 0.7860, 0.7900, 0.7910, 0.7890,
+        0.7890, 0.7910], dtype=torch.float64)
+Run: 8, dropout_rate: 0.5000,train_acc: 1.0000, val_acc: 0.7080, test_acc: 0.7210
+pavpu
+tensor([0.2810, 0.7510, 0.7500, 0.7490, 0.7430, 0.7470, 0.7390, 0.7280, 0.7260,
+        0.7260, 0.7200], dtype=torch.float64)
+Run: 9, dropout_rate: 0.5000,train_acc: 1.0000, val_acc: 0.7340, test_acc: 0.7640
+pavpu
+tensor([0.2360, 0.7010, 0.7520, 0.7810, 0.7870, 0.7920, 0.7910, 0.7910, 0.7800,
+        0.7730, 0.7650], dtype=torch.float64)
+Run: 10, dropout_rate: 0.5000,train_acc: 1.0000, val_acc: 0.7160, test_acc: 0.7140
+pavpu
+tensor([0.2870, 0.7510, 0.7410, 0.7410, 0.7450, 0.7370, 0.7290, 0.7190, 0.7160,
+        0.7160, 0.7140], dtype=torch.float64)
+Experiment: default_exp_name
+Binarized: 0,Precision sparsity: 0,Dropout rate: 0.500,Dropout mode: output,samples : 20,Bayesian layers : 3, Test Accuracy: 0.7521, std: 0.0349
+Create a 4-layered Bi-GCN.
+Layer 0, in_dim 1433, out_dim 256
+Layer 1, in_dim 256, out_dim 256
+Layer 2, in_dim 256, out_dim 256
+Layer 3, in_dim 256, out_dim 7
+Run: 1, dropout_rate: 0.2500,train_acc: 1.0000, val_acc: 0.7700, test_acc: 0.7830
+pavpu
+tensor([0.2150, 0.7020, 0.7650, 0.7750, 0.7850, 0.7850, 0.7950, 0.7880, 0.7840,
+        0.7850, 0.7860], dtype=torch.float64)
+Run: 2, dropout_rate: 0.2500,train_acc: 1.0000, val_acc: 0.7620, test_acc: 0.7730
+pavpu
+tensor([0.2310, 0.7350, 0.7830, 0.8050, 0.8090, 0.8040, 0.7930, 0.7860, 0.7770,
+        0.7740, 0.7700], dtype=torch.float64)
+Run: 3, dropout_rate: 0.2500,train_acc: 1.0000, val_acc: 0.7600, test_acc: 0.7580
+pavpu
+tensor([0.2400, 0.7120, 0.7520, 0.7680, 0.7770, 0.7790, 0.7770, 0.7750, 0.7670,
+        0.7660, 0.7610], dtype=torch.float64)
+Run: 4, dropout_rate: 0.2500,train_acc: 1.0000, val_acc: 0.7640, test_acc: 0.7730
+pavpu
+tensor([0.2320, 0.7000, 0.7590, 0.7780, 0.7910, 0.7960, 0.7880, 0.7870, 0.7810,
+        0.7740, 0.7690], dtype=torch.float64)
+Run: 5, dropout_rate: 0.2500,train_acc: 1.0000, val_acc: 0.7520, test_acc: 0.7630
+pavpu
+tensor([0.2340, 0.7180, 0.7770, 0.7940, 0.7920, 0.8030, 0.8030, 0.7950, 0.7810,
+        0.7720, 0.7670], dtype=torch.float64)
+Run: 6, dropout_rate: 0.2500,train_acc: 1.0000, val_acc: 0.7380, test_acc: 0.7610
+pavpu
+tensor([0.2380, 0.7090, 0.7560, 0.7870, 0.7900, 0.7830, 0.7860, 0.7820, 0.7740,
+        0.7660, 0.7630], dtype=torch.float64)
+Run: 7, dropout_rate: 0.2500,train_acc: 1.0000, val_acc: 0.7660, test_acc: 0.7690
+pavpu
+tensor([0.2300, 0.7050, 0.7590, 0.7830, 0.7970, 0.7980, 0.7860, 0.7890, 0.7810,
+        0.7760, 0.7710], dtype=torch.float64)
+Run: 8, dropout_rate: 0.2500,train_acc: 1.0000, val_acc: 0.7680, test_acc: 0.7900
+pavpu
+tensor([0.2090, 0.7090, 0.7590, 0.7720, 0.7850, 0.7900, 0.7950, 0.7970, 0.7910,
+        0.7910, 0.7920], dtype=torch.float64)
+Run: 9, dropout_rate: 0.2500,train_acc: 1.0000, val_acc: 0.7680, test_acc: 0.7700
+pavpu
+tensor([0.2280, 0.7220, 0.7710, 0.7950, 0.8080, 0.7980, 0.7850, 0.7860, 0.7830,
+        0.7760, 0.7730], dtype=torch.float64)
+Run: 10, dropout_rate: 0.2500,train_acc: 1.0000, val_acc: 0.7460, test_acc: 0.7710
+pavpu
+tensor([0.2310, 0.7170, 0.7520, 0.7850, 0.8110, 0.8110, 0.7980, 0.7910, 0.7810,
+        0.7740, 0.7680], dtype=torch.float64)
+Experiment: default_exp_name
+Binarized: 0,Precision sparsity: 0,Dropout rate: 0.250,Dropout mode: output,samples : 20,Bayesian layers : 3, Test Accuracy: 0.7711, std: 0.0097
+Create a 4-layered Bi-GCN.
+Layer 0, in_dim 1433, out_dim 256
+Layer 1, in_dim 256, out_dim 256
+Layer 2, in_dim 256, out_dim 256
+Layer 3, in_dim 256, out_dim 7
+Run: 1, dropout_rate: 0.1250,train_acc: 1.0000, val_acc: 0.7540, test_acc: 0.7550
+pavpu
+tensor([0.2460, 0.7160, 0.7760, 0.7920, 0.8000, 0.7940, 0.7780, 0.7750, 0.7670,
+        0.7610, 0.7550], dtype=torch.float64)
+Run: 2, dropout_rate: 0.1250,train_acc: 1.0000, val_acc: 0.7720, test_acc: 0.7910
+pavpu
+tensor([0.2080, 0.7060, 0.7510, 0.7740, 0.7870, 0.7840, 0.7920, 0.7900, 0.7880,
+        0.7910, 0.7930], dtype=torch.float64)
+Run: 3, dropout_rate: 0.1250,train_acc: 1.0000, val_acc: 0.7460, test_acc: 0.7740
+pavpu
+tensor([0.2250, 0.7170, 0.7640, 0.7840, 0.8040, 0.8020, 0.7940, 0.7880, 0.7850,
+        0.7750, 0.7740], dtype=torch.float64)
+Run: 4, dropout_rate: 0.1250,train_acc: 1.0000, val_acc: 0.7620, test_acc: 0.7730
+pavpu
+tensor([0.2280, 0.7200, 0.7670, 0.7900, 0.7930, 0.7990, 0.7870, 0.7860, 0.7800,
+        0.7740, 0.7730], dtype=torch.float64)
+Run: 5, dropout_rate: 0.1250,train_acc: 1.0000, val_acc: 0.7500, test_acc: 0.7670
+pavpu
+tensor([0.2360, 0.7100, 0.7590, 0.7830, 0.8070, 0.8000, 0.7880, 0.7840, 0.7750,
+        0.7680, 0.7650], dtype=torch.float64)
+Run: 6, dropout_rate: 0.1250,train_acc: 1.0000, val_acc: 0.7600, test_acc: 0.7750
+pavpu
+tensor([0.2300, 0.7270, 0.7770, 0.7940, 0.8070, 0.7980, 0.7910, 0.7860, 0.7810,
+        0.7740, 0.7710], dtype=torch.float64)
+Run: 7, dropout_rate: 0.1250,train_acc: 1.0000, val_acc: 0.7620, test_acc: 0.7700
+pavpu
+tensor([0.2310, 0.7040, 0.7590, 0.7840, 0.7930, 0.7940, 0.7910, 0.7890, 0.7810,
+        0.7760, 0.7700], dtype=torch.float64)
+Run: 8, dropout_rate: 0.1250,train_acc: 1.0000, val_acc: 0.7720, test_acc: 0.7870
+pavpu
+tensor([0.2130, 0.7030, 0.7570, 0.7760, 0.7870, 0.7860, 0.7920, 0.7830, 0.7840,
+        0.7870, 0.7880], dtype=torch.float64)
+Run: 9, dropout_rate: 0.1250,train_acc: 1.0000, val_acc: 0.7660, test_acc: 0.7890
+pavpu
+tensor([0.2090, 0.7070, 0.7530, 0.7730, 0.7890, 0.7890, 0.7970, 0.7940, 0.7880,
+        0.7920, 0.7920], dtype=torch.float64)
+Run: 10, dropout_rate: 0.1250,train_acc: 1.0000, val_acc: 0.7660, test_acc: 0.7720
+pavpu
+tensor([0.2260, 0.7210, 0.7710, 0.7920, 0.8000, 0.8030, 0.7920, 0.7870, 0.7830,
+        0.7780, 0.7740], dtype=torch.float64)
+Experiment: default_exp_name
+Binarized: 0,Precision sparsity: 0,Dropout rate: 0.125,Dropout mode: output,samples : 20,Bayesian layers : 3, Test Accuracy: 0.7753, std: 0.0110
+Create a 4-layered Bi-GCN.
+Layer 0, in_dim 1433, out_dim 256
+Layer 1, in_dim 256, out_dim 256
+Layer 2, in_dim 256, out_dim 256
+Layer 3, in_dim 256, out_dim 7
+Run: 1, dropout_rate: 0.5000,train_acc: 1.0000, val_acc: 0.7680, test_acc: 0.7830
+pavpu
+tensor([0.2040, 0.6610, 0.7260, 0.7670, 0.7840, 0.8010, 0.8110, 0.8110, 0.8050,
+        0.7980, 0.7950], dtype=torch.float64)
+Run: 2, dropout_rate: 0.5000,train_acc: 1.0000, val_acc: 0.7860, test_acc: 0.7940
+pavpu
+tensor([0.2000, 0.6730, 0.7330, 0.7650, 0.7990, 0.8000, 0.8100, 0.8160, 0.8010,
+        0.7990, 0.8000], dtype=torch.float64)
+Run: 3, dropout_rate: 0.5000,train_acc: 1.0000, val_acc: 0.7620, test_acc: 0.7880
+pavpu
+tensor([0.1960, 0.6650, 0.7200, 0.7500, 0.7820, 0.8040, 0.8170, 0.8100, 0.8050,
+        0.8060, 0.8030], dtype=torch.float64)
+Run: 4, dropout_rate: 0.5000,train_acc: 1.0000, val_acc: 0.7760, test_acc: 0.8000
+pavpu
+tensor([0.1960, 0.6880, 0.7380, 0.7750, 0.8110, 0.8210, 0.8190, 0.8230, 0.8140,
+        0.8050, 0.8050], dtype=torch.float64)
+Run: 5, dropout_rate: 0.5000,train_acc: 1.0000, val_acc: 0.7540, test_acc: 0.7830
+pavpu
+tensor([0.1990, 0.6730, 0.7220, 0.7610, 0.7920, 0.8050, 0.8010, 0.8070, 0.8020,
+        0.7990, 0.7990], dtype=torch.float64)
+Run: 6, dropout_rate: 0.5000,train_acc: 1.0000, val_acc: 0.7780, test_acc: 0.7890
+pavpu
+tensor([0.2010, 0.6740, 0.7320, 0.7620, 0.7830, 0.7940, 0.8000, 0.8060, 0.8050,
+        0.7990, 0.7990], dtype=torch.float64)
+Run: 7, dropout_rate: 0.5000,train_acc: 1.0000, val_acc: 0.7720, test_acc: 0.7970
+pavpu
+tensor([0.1980, 0.6840, 0.7380, 0.7730, 0.8020, 0.8080, 0.8200, 0.8150, 0.8120,
+        0.8010, 0.8020], dtype=torch.float64)
+Run: 8, dropout_rate: 0.5000,train_acc: 1.0000, val_acc: 0.7660, test_acc: 0.7840
+pavpu
+tensor([0.2050, 0.6830, 0.7370, 0.7740, 0.7930, 0.8060, 0.8060, 0.8100, 0.8080,
+        0.7990, 0.7950], dtype=torch.float64)
+Run: 9, dropout_rate: 0.5000,train_acc: 1.0000, val_acc: 0.7880, test_acc: 0.7960
+pavpu
+tensor([0.2050, 0.7030, 0.7430, 0.7820, 0.8040, 0.8100, 0.8180, 0.8110, 0.8020,
+        0.7950, 0.7940], dtype=torch.float64)
+Run: 10, dropout_rate: 0.5000,train_acc: 1.0000, val_acc: 0.7680, test_acc: 0.7910
+pavpu
+tensor([0.2060, 0.6680, 0.7260, 0.7600, 0.7910, 0.8050, 0.8230, 0.8160, 0.8110,
+        0.8000, 0.7950], dtype=torch.float64)
+Experiment: default_exp_name
+Binarized: 1,Precision sparsity: 0,Dropout rate: 0.500,Dropout mode: output,samples : 20,Bayesian layers : 3, Test Accuracy: 0.7905, std: 0.0061
+Create a 4-layered Bi-GCN.
+Layer 0, in_dim 1433, out_dim 256
+Layer 1, in_dim 256, out_dim 256
+Layer 2, in_dim 256, out_dim 256
+Layer 3, in_dim 256, out_dim 7
+Run: 1, dropout_rate: 0.5000,train_acc: 1.0000, val_acc: 0.7700, test_acc: 0.7780
+pavpu
+tensor([0.2230, 0.7320, 0.7760, 0.8100, 0.8190, 0.8220, 0.8200, 0.7990, 0.7880,
+        0.7830, 0.7780], dtype=torch.float64)
+Run: 2, dropout_rate: 0.5000,train_acc: 1.0000, val_acc: 0.7440, test_acc: 0.7560
+pavpu
+tensor([0.2180, 0.7200, 0.7470, 0.7790, 0.7990, 0.8120, 0.8220, 0.8160, 0.8000,
+        0.7890, 0.7830], dtype=torch.float64)
+Run: 3, dropout_rate: 0.5000,train_acc: 1.0000, val_acc: 0.7580, test_acc: 0.7700
+pavpu
+tensor([0.2110, 0.7020, 0.7680, 0.8000, 0.8160, 0.8150, 0.8110, 0.8010, 0.7950,
+        0.7920, 0.7900], dtype=torch.float64)
+Run: 4, dropout_rate: 0.5000,train_acc: 1.0000, val_acc: 0.7580, test_acc: 0.7810
+pavpu
+tensor([0.2100, 0.7220, 0.7740, 0.7880, 0.8000, 0.8090, 0.8050, 0.7980, 0.8000,
+        0.7930, 0.7890], dtype=torch.float64)
+Run: 5, dropout_rate: 0.5000,train_acc: 1.0000, val_acc: 0.7700, test_acc: 0.7980
+pavpu
+tensor([0.1890, 0.7000, 0.7410, 0.7780, 0.8040, 0.8150, 0.8200, 0.8160, 0.8190,
+        0.8150, 0.8120], dtype=torch.float64)
+Run: 6, dropout_rate: 0.5000,train_acc: 1.0000, val_acc: 0.7660, test_acc: 0.7910
+pavpu
+tensor([0.1990, 0.6990, 0.7570, 0.7970, 0.8170, 0.8270, 0.8250, 0.8170, 0.8110,
+        0.8050, 0.8020], dtype=torch.float64)
+Run: 7, dropout_rate: 0.5000,train_acc: 1.0000, val_acc: 0.7660, test_acc: 0.8090
+pavpu
+tensor([0.1960, 0.6990, 0.7570, 0.7850, 0.8040, 0.8040, 0.8050, 0.8070, 0.8040,
+        0.8070, 0.8050], dtype=torch.float64)
+Run: 8, dropout_rate: 0.5000,train_acc: 1.0000, val_acc: 0.7640, test_acc: 0.8000
+pavpu
+tensor([0.1930, 0.7180, 0.7630, 0.8020, 0.8170, 0.8280, 0.8230, 0.8120, 0.8090,
+        0.8040, 0.8060], dtype=torch.float64)
+Run: 9, dropout_rate: 0.5000,train_acc: 0.9929, val_acc: 0.7540, test_acc: 0.7900
+pavpu
+tensor([0.2010, 0.7050, 0.7570, 0.7830, 0.8060, 0.8150, 0.8180, 0.8100, 0.8060,
+        0.8000, 0.8000], dtype=torch.float64)
+Run: 10, dropout_rate: 0.5000,train_acc: 1.0000, val_acc: 0.7880, test_acc: 0.7950
+pavpu
+tensor([0.1930, 0.7210, 0.7620, 0.8010, 0.8230, 0.8290, 0.8420, 0.8330, 0.8190,
+        0.8090, 0.8080], dtype=torch.float64)
+Experiment: default_exp_name
+Binarized: 1,Precision sparsity: 0,Dropout rate: 0.500,Dropout mode: input,samples : 20,Bayesian layers : 3, Test Accuracy: 0.7868, std: 0.0157
+Create a 4-layered Bi-GCN.
+Layer 0, in_dim 1433, out_dim 256
+Layer 1, in_dim 256, out_dim 256
+Layer 2, in_dim 256, out_dim 256
+Layer 3, in_dim 256, out_dim 7
+Run: 1, dropout_rate: 0.2500,train_acc: 1.0000, val_acc: 0.7680, test_acc: 0.7740
+pavpu
+tensor([0.2220, 0.7270, 0.7770, 0.7980, 0.8090, 0.8160, 0.7970, 0.7880, 0.7840,
+        0.7790, 0.7770], dtype=torch.float64)
+Run: 2, dropout_rate: 0.2500,train_acc: 1.0000, val_acc: 0.7720, test_acc: 0.8000
+pavpu
+tensor([0.1950, 0.7190, 0.7640, 0.7940, 0.8100, 0.8170, 0.8260, 0.8150, 0.8120,
+        0.8090, 0.8060], dtype=torch.float64)
+Run: 3, dropout_rate: 0.2500,train_acc: 1.0000, val_acc: 0.7820, test_acc: 0.7850
+pavpu
+tensor([0.2090, 0.7200, 0.7580, 0.7750, 0.7880, 0.7980, 0.8040, 0.8010, 0.8010,
+        0.7980, 0.7920], dtype=torch.float64)
+Run: 4, dropout_rate: 0.2500,train_acc: 1.0000, val_acc: 0.7660, test_acc: 0.8020
+pavpu
+tensor([0.2000, 0.6780, 0.7500, 0.7820, 0.8050, 0.8220, 0.8150, 0.8190, 0.8100,
+        0.8050, 0.8010], dtype=torch.float64)
+Run: 5, dropout_rate: 0.2500,train_acc: 1.0000, val_acc: 0.7760, test_acc: 0.7910
+pavpu
+tensor([0.2030, 0.7200, 0.7530, 0.7950, 0.8010, 0.8040, 0.8090, 0.8040, 0.8000,
+        0.7970, 0.7980], dtype=torch.float64)
+Run: 6, dropout_rate: 0.2500,train_acc: 1.0000, val_acc: 0.7380, test_acc: 0.7710
+pavpu
+tensor([0.2220, 0.7190, 0.7660, 0.7910, 0.8090, 0.8080, 0.8010, 0.8050, 0.7980,
+        0.7850, 0.7790], dtype=torch.float64)
+Run: 7, dropout_rate: 0.2500,train_acc: 1.0000, val_acc: 0.7600, test_acc: 0.7880
+pavpu
+tensor([0.2020, 0.7070, 0.7490, 0.7830, 0.7990, 0.8050, 0.8090, 0.8040, 0.8010,
+        0.8020, 0.7990], dtype=torch.float64)
+Run: 8, dropout_rate: 0.2500,train_acc: 1.0000, val_acc: 0.7660, test_acc: 0.8030
+pavpu
+tensor([0.2010, 0.6990, 0.7420, 0.7790, 0.8170, 0.8180, 0.8230, 0.8220, 0.8130,
+        0.8060, 0.8000], dtype=torch.float64)
+Run: 9, dropout_rate: 0.2500,train_acc: 1.0000, val_acc: 0.7660, test_acc: 0.7800
+pavpu
+tensor([0.2040, 0.6940, 0.7490, 0.7620, 0.7970, 0.8070, 0.8280, 0.8210, 0.8090,
+        0.7960, 0.7950], dtype=torch.float64)
+Run: 10, dropout_rate: 0.2500,train_acc: 1.0000, val_acc: 0.7520, test_acc: 0.7820
+pavpu
+tensor([0.2170, 0.7220, 0.7680, 0.8100, 0.8180, 0.8160, 0.8210, 0.8100, 0.7960,
+        0.7850, 0.7810], dtype=torch.float64)
+Experiment: default_exp_name
+Binarized: 1,Precision sparsity: 0,Dropout rate: 0.250,Dropout mode: output,samples : 20,Bayesian layers : 3, Test Accuracy: 0.7876, std: 0.0114
+Create a 4-layered Bi-GCN.
+Layer 0, in_dim 1433, out_dim 256
+Layer 1, in_dim 256, out_dim 256
+Layer 2, in_dim 256, out_dim 256
+Layer 3, in_dim 256, out_dim 7
+Run: 1, dropout_rate: 0.2500,train_acc: 1.0000, val_acc: 0.7520, test_acc: 0.7750
+pavpu
+tensor([0.2170, 0.7290, 0.7670, 0.7980, 0.8110, 0.8060, 0.8080, 0.7950, 0.7890,
+        0.7880, 0.7840], dtype=torch.float64)
+Run: 2, dropout_rate: 0.2500,train_acc: 1.0000, val_acc: 0.7540, test_acc: 0.7760
+pavpu
+tensor([0.2070, 0.7090, 0.7610, 0.7920, 0.8050, 0.8170, 0.8080, 0.7980, 0.7980,
+        0.7960, 0.7940], dtype=torch.float64)
+Run: 3, dropout_rate: 0.2500,train_acc: 1.0000, val_acc: 0.7840, test_acc: 0.7890
+pavpu
+tensor([0.2100, 0.7190, 0.7780, 0.8090, 0.8190, 0.8270, 0.8210, 0.8050, 0.7930,
+        0.7930, 0.7910], dtype=torch.float64)
+Run: 4, dropout_rate: 0.2500,train_acc: 1.0000, val_acc: 0.7660, test_acc: 0.7950
+pavpu
+tensor([0.2020, 0.7240, 0.7690, 0.7960, 0.8180, 0.8270, 0.8160, 0.8070, 0.8050,
+        0.7990, 0.7990], dtype=torch.float64)
+Run: 5, dropout_rate: 0.2500,train_acc: 1.0000, val_acc: 0.7720, test_acc: 0.7830
+pavpu
+tensor([0.2140, 0.7260, 0.7660, 0.7870, 0.8030, 0.8120, 0.8140, 0.8020, 0.7930,
+        0.7910, 0.7870], dtype=torch.float64)
+Run: 6, dropout_rate: 0.2500,train_acc: 1.0000, val_acc: 0.7780, test_acc: 0.7810
+pavpu
+tensor([0.2100, 0.7680, 0.8040, 0.8230, 0.8200, 0.8170, 0.8100, 0.8040, 0.8000,
+        0.7950, 0.7900], dtype=torch.float64)
+Run: 7, dropout_rate: 0.2500,train_acc: 1.0000, val_acc: 0.7620, test_acc: 0.7900
+pavpu
+tensor([0.2060, 0.7180, 0.7570, 0.7840, 0.8020, 0.8140, 0.8150, 0.8120, 0.7980,
+        0.7990, 0.7940], dtype=torch.float64)
+Run: 8, dropout_rate: 0.2500,train_acc: 1.0000, val_acc: 0.7660, test_acc: 0.7830
+pavpu
+tensor([0.2020, 0.7190, 0.7690, 0.7910, 0.8160, 0.8210, 0.8200, 0.8100, 0.8030,
+        0.7990, 0.7990], dtype=torch.float64)
+Run: 9, dropout_rate: 0.2500,train_acc: 1.0000, val_acc: 0.7680, test_acc: 0.7780
+pavpu
+tensor([0.2150, 0.7290, 0.7800, 0.8000, 0.8010, 0.8090, 0.8000, 0.7900, 0.7900,
+        0.7860, 0.7840], dtype=torch.float64)
+Run: 10, dropout_rate: 0.2500,train_acc: 1.0000, val_acc: 0.7440, test_acc: 0.7710
+pavpu
+tensor([0.2210, 0.7390, 0.7770, 0.7970, 0.8100, 0.8070, 0.7940, 0.7850, 0.7840,
+        0.7800, 0.7810], dtype=torch.float64)
+Experiment: default_exp_name
+Binarized: 1,Precision sparsity: 0,Dropout rate: 0.250,Dropout mode: input,samples : 20,Bayesian layers : 3, Test Accuracy: 0.7821, std: 0.0075
+Create a 4-layered Bi-GCN.
+Layer 0, in_dim 1433, out_dim 256
+Layer 1, in_dim 256, out_dim 256
+Layer 2, in_dim 256, out_dim 256
+Layer 3, in_dim 256, out_dim 7
+Run: 1, dropout_rate: 0.1250,train_acc: 1.0000, val_acc: 0.7720, test_acc: 0.7890
+pavpu
+tensor([0.2110, 0.7000, 0.7490, 0.7840, 0.8050, 0.8130, 0.8090, 0.8050, 0.7980,
+        0.7930, 0.7900], dtype=torch.float64)
+Run: 2, dropout_rate: 0.1250,train_acc: 1.0000, val_acc: 0.7820, test_acc: 0.7930
+pavpu
+tensor([0.1990, 0.7460, 0.7830, 0.8070, 0.8260, 0.8240, 0.8160, 0.8150, 0.8020,
+        0.8010, 0.8000], dtype=torch.float64)
+Run: 3, dropout_rate: 0.1250,train_acc: 1.0000, val_acc: 0.7640, test_acc: 0.7820
+pavpu
+tensor([0.2100, 0.7360, 0.7750, 0.7960, 0.7970, 0.8080, 0.8070, 0.8040, 0.7950,
+        0.7930, 0.7910], dtype=torch.float64)
+Run: 4, dropout_rate: 0.1250,train_acc: 1.0000, val_acc: 0.7620, test_acc: 0.7800
+pavpu
+tensor([0.2180, 0.7370, 0.7830, 0.8080, 0.8020, 0.8090, 0.8030, 0.8030, 0.7910,
+        0.7860, 0.7830], dtype=torch.float64)
+Run: 5, dropout_rate: 0.1250,train_acc: 1.0000, val_acc: 0.7600, test_acc: 0.7910
+pavpu
+tensor([0.2020, 0.7320, 0.7720, 0.7910, 0.8080, 0.8150, 0.8160, 0.8120, 0.8000,
+        0.7980, 0.7990], dtype=torch.float64)
+Run: 6, dropout_rate: 0.1250,train_acc: 1.0000, val_acc: 0.7620, test_acc: 0.7890
+pavpu
+tensor([0.2060, 0.7510, 0.7730, 0.7970, 0.7920, 0.8100, 0.8090, 0.8080, 0.8030,
+        0.7960, 0.7940], dtype=torch.float64)
+Run: 7, dropout_rate: 0.1250,train_acc: 1.0000, val_acc: 0.7560, test_acc: 0.7740
+pavpu
+tensor([0.2200, 0.7360, 0.7820, 0.8000, 0.8060, 0.8090, 0.7990, 0.8020, 0.7950,
+        0.7830, 0.7810], dtype=torch.float64)
+Run: 8, dropout_rate: 0.1250,train_acc: 1.0000, val_acc: 0.7640, test_acc: 0.7930
+pavpu
+tensor([0.2050, 0.7370, 0.7720, 0.7920, 0.8060, 0.8210, 0.8220, 0.8130, 0.8040,
+        0.8020, 0.7960], dtype=torch.float64)
+Run: 9, dropout_rate: 0.1250,train_acc: 1.0000, val_acc: 0.7680, test_acc: 0.7950
+pavpu
+tensor([0.2030, 0.7200, 0.7840, 0.8120, 0.8190, 0.8170, 0.8100, 0.8070, 0.8030,
+        0.7990, 0.7980], dtype=torch.float64)
+Run: 10, dropout_rate: 0.1250,train_acc: 1.0000, val_acc: 0.7800, test_acc: 0.7930
+pavpu
+tensor([0.2050, 0.7340, 0.7680, 0.8010, 0.8110, 0.8210, 0.8170, 0.8080, 0.7970,
+        0.7970, 0.7960], dtype=torch.float64)
+Experiment: default_exp_name
+Binarized: 1,Precision sparsity: 0,Dropout rate: 0.125,Dropout mode: output,samples : 20,Bayesian layers : 3, Test Accuracy: 0.7879, std: 0.0069
+Create a 4-layered Bi-GCN.
+Layer 0, in_dim 1433, out_dim 256
+Layer 1, in_dim 256, out_dim 256
+Layer 2, in_dim 256, out_dim 256
+Layer 3, in_dim 256, out_dim 7
+Run: 1, dropout_rate: 0.1250,train_acc: 1.0000, val_acc: 0.7600, test_acc: 0.7840
+pavpu
+tensor([0.2120, 0.7300, 0.7780, 0.8100, 0.8270, 0.8210, 0.8100, 0.8090, 0.7980,
+        0.7910, 0.7900], dtype=torch.float64)
+Run: 2, dropout_rate: 0.1250,train_acc: 1.0000, val_acc: 0.7620, test_acc: 0.7880
+pavpu
+tensor([0.2080, 0.7140, 0.7620, 0.7960, 0.8120, 0.8120, 0.8100, 0.8080, 0.8020,
+        0.7950, 0.7930], dtype=torch.float64)
+Run: 3, dropout_rate: 0.1250,train_acc: 1.0000, val_acc: 0.7440, test_acc: 0.8010
+pavpu
+tensor([0.1980, 0.7400, 0.7870, 0.7970, 0.8050, 0.8120, 0.8180, 0.8120, 0.8060,
+        0.8040, 0.8030], dtype=torch.float64)
+Run: 4, dropout_rate: 0.1250,train_acc: 1.0000, val_acc: 0.7820, test_acc: 0.8010
+pavpu
+tensor([0.1970, 0.7310, 0.7860, 0.8010, 0.8080, 0.8140, 0.8110, 0.8100, 0.8070,
+        0.8060, 0.8040], dtype=torch.float64)
+Run: 5, dropout_rate: 0.1250,train_acc: 1.0000, val_acc: 0.7800, test_acc: 0.7790
+pavpu
+tensor([0.2150, 0.7390, 0.7870, 0.8000, 0.8030, 0.8030, 0.7970, 0.7870, 0.7910,
+        0.7870, 0.7860], dtype=torch.float64)
+Run: 6, dropout_rate: 0.1250,train_acc: 1.0000, val_acc: 0.7640, test_acc: 0.7880
+pavpu
+tensor([0.2110, 0.7490, 0.7760, 0.8010, 0.8230, 0.8140, 0.8120, 0.8050, 0.7960,
+        0.7890, 0.7880], dtype=torch.float64)
+Run: 7, dropout_rate: 0.1250,train_acc: 1.0000, val_acc: 0.7440, test_acc: 0.7890
+pavpu
+tensor([0.2050, 0.7200, 0.7720, 0.7910, 0.8020, 0.8160, 0.8150, 0.8060, 0.8060,
+        0.7990, 0.7960], dtype=torch.float64)
+Run: 8, dropout_rate: 0.1250,train_acc: 1.0000, val_acc: 0.7720, test_acc: 0.7760
+pavpu
+tensor([0.2210, 0.7300, 0.7610, 0.7830, 0.7920, 0.7980, 0.7980, 0.7980, 0.7910,
+        0.7810, 0.7800], dtype=torch.float64)
+Run: 9, dropout_rate: 0.1250,train_acc: 1.0000, val_acc: 0.7640, test_acc: 0.7840
+pavpu
+tensor([0.2120, 0.7590, 0.7920, 0.8110, 0.8200, 0.8280, 0.8170, 0.8120, 0.8030,
+        0.7970, 0.7890], dtype=torch.float64)
+Run: 10, dropout_rate: 0.1250,train_acc: 1.0000, val_acc: 0.7580, test_acc: 0.7680
+pavpu
+tensor([0.2320, 0.7600, 0.7900, 0.8090, 0.8130, 0.8090, 0.8020, 0.7850, 0.7790,
+        0.7720, 0.7680], dtype=torch.float64)
+Experiment: default_exp_name
+Binarized: 1,Precision sparsity: 0,Dropout rate: 0.125,Dropout mode: input,samples : 20,Bayesian layers : 3, Test Accuracy: 0.7858, std: 0.0103
+Create a 4-layered Bi-GCN.
+Layer 0, in_dim 1433, out_dim 256
+Layer 1, in_dim 256, out_dim 256
+Layer 2, in_dim 256, out_dim 256
+Layer 3, in_dim 256, out_dim 7
+Run: 1, dropout_rate: 0.5000,train_acc: 1.0000, val_acc: 0.7880, test_acc: 0.7990
+pavpu
+tensor([0.1960, 0.6840, 0.7410, 0.7800, 0.7950, 0.8020, 0.8040, 0.8040, 0.8070,
+        0.8050, 0.8030], dtype=torch.float64)
+Run: 2, dropout_rate: 0.5000,train_acc: 1.0000, val_acc: 0.7820, test_acc: 0.8030
+pavpu
+tensor([0.1910, 0.6790, 0.7340, 0.7740, 0.7960, 0.8150, 0.8120, 0.8200, 0.8150,
+        0.8120, 0.8100], dtype=torch.float64)
+Run: 3, dropout_rate: 0.5000,train_acc: 1.0000, val_acc: 0.7800, test_acc: 0.7890
+pavpu
+tensor([0.2130, 0.6860, 0.7510, 0.7710, 0.7950, 0.7990, 0.8020, 0.8030, 0.8010,
+        0.7910, 0.7880], dtype=torch.float64)
+Run: 4, dropout_rate: 0.5000,train_acc: 1.0000, val_acc: 0.7780, test_acc: 0.7870
+pavpu
+tensor([0.2050, 0.6820, 0.7400, 0.7760, 0.8040, 0.8180, 0.8160, 0.8150, 0.8010,
+        0.7940, 0.7940], dtype=torch.float64)
+Run: 5, dropout_rate: 0.5000,train_acc: 1.0000, val_acc: 0.7580, test_acc: 0.7930
+pavpu
+tensor([0.2110, 0.7070, 0.7530, 0.7750, 0.8030, 0.8130, 0.8070, 0.8030, 0.7970,
+        0.7930, 0.7900], dtype=torch.float64)
+Run: 6, dropout_rate: 0.5000,train_acc: 1.0000, val_acc: 0.7720, test_acc: 0.7970
+pavpu
+tensor([0.2090, 0.6850, 0.7430, 0.7780, 0.7960, 0.8110, 0.8100, 0.8130, 0.7990,
+        0.7960, 0.7920], dtype=torch.float64)
+Run: 7, dropout_rate: 0.5000,train_acc: 1.0000, val_acc: 0.7620, test_acc: 0.7920
+pavpu
+tensor([0.2040, 0.6810, 0.7280, 0.7640, 0.7860, 0.8000, 0.8060, 0.8120, 0.8010,
+        0.8010, 0.7950], dtype=torch.float64)
+Run: 8, dropout_rate: 0.5000,train_acc: 1.0000, val_acc: 0.7880, test_acc: 0.7910
+pavpu
+tensor([0.1970, 0.6850, 0.7350, 0.7620, 0.7830, 0.8100, 0.8160, 0.8200, 0.8110,
+        0.8050, 0.8040], dtype=torch.float64)
+Run: 9, dropout_rate: 0.5000,train_acc: 1.0000, val_acc: 0.7760, test_acc: 0.8000
+pavpu
+tensor([0.2060, 0.6940, 0.7560, 0.7760, 0.7990, 0.8050, 0.8130, 0.8050, 0.8070,
+        0.7970, 0.7950], dtype=torch.float64)
+Run: 10, dropout_rate: 0.5000,train_acc: 1.0000, val_acc: 0.7840, test_acc: 0.7900
+pavpu
+tensor([0.2120, 0.7200, 0.7690, 0.7940, 0.8220, 0.8300, 0.8300, 0.8130, 0.7980,
+        0.7950, 0.7890], dtype=torch.float64)
+Experiment: default_exp_name
+Binarized: 1,Precision sparsity: 0,Dropout rate: 0.500,Dropout mode: output,samples : 20,Bayesian layers : 2, Test Accuracy: 0.7941, std: 0.0053
+Create a 4-layered Bi-GCN.
+Layer 0, in_dim 1433, out_dim 256
+Layer 1, in_dim 256, out_dim 256
+Layer 2, in_dim 256, out_dim 256
+Layer 3, in_dim 256, out_dim 7
+Run: 1, dropout_rate: 0.5000,train_acc: 1.0000, val_acc: 0.7620, test_acc: 0.7820
+pavpu
+tensor([0.2050, 0.7150, 0.7610, 0.7920, 0.8100, 0.8180, 0.8230, 0.8050, 0.7980,
+        0.7960, 0.7960], dtype=torch.float64)
+Run: 2, dropout_rate: 0.5000,train_acc: 1.0000, val_acc: 0.7560, test_acc: 0.7780
+pavpu
+tensor([0.2010, 0.7050, 0.7690, 0.8060, 0.8240, 0.8300, 0.8270, 0.8190, 0.8000,
+        0.7990, 0.8000], dtype=torch.float64)
+Run: 3, dropout_rate: 0.5000,train_acc: 1.0000, val_acc: 0.7680, test_acc: 0.7710
+pavpu
+tensor([0.2030, 0.6960, 0.7540, 0.7750, 0.7880, 0.8010, 0.8140, 0.8080, 0.8040,
+        0.7980, 0.7970], dtype=torch.float64)
+Run: 4, dropout_rate: 0.5000,train_acc: 1.0000, val_acc: 0.7900, test_acc: 0.7840
+pavpu
+tensor([0.2040, 0.7030, 0.7580, 0.7860, 0.8080, 0.8160, 0.8170, 0.8070, 0.8070,
+        0.8000, 0.7970], dtype=torch.float64)
+Run: 5, dropout_rate: 0.5000,train_acc: 1.0000, val_acc: 0.7680, test_acc: 0.7920
+pavpu
+tensor([0.2000, 0.7140, 0.7710, 0.8040, 0.8090, 0.8260, 0.8060, 0.8130, 0.8080,
+        0.8040, 0.8010], dtype=torch.float64)
+Run: 6, dropout_rate: 0.5000,train_acc: 1.0000, val_acc: 0.7580, test_acc: 0.7730
+pavpu
+tensor([0.2140, 0.6770, 0.7280, 0.7720, 0.7970, 0.8070, 0.8120, 0.7990, 0.7950,
+        0.7930, 0.7870], dtype=torch.float64)
+Run: 7, dropout_rate: 0.5000,train_acc: 1.0000, val_acc: 0.7720, test_acc: 0.8010
+pavpu
+tensor([0.1920, 0.7010, 0.7660, 0.8090, 0.8200, 0.8280, 0.8220, 0.8180, 0.8100,
+        0.8070, 0.8090], dtype=torch.float64)
+Run: 8, dropout_rate: 0.5000,train_acc: 1.0000, val_acc: 0.7580, test_acc: 0.7900
+pavpu
+tensor([0.2020, 0.7130, 0.7600, 0.7850, 0.7960, 0.8210, 0.8150, 0.8100, 0.8080,
+        0.8000, 0.7980], dtype=torch.float64)
+Run: 9, dropout_rate: 0.5000,train_acc: 1.0000, val_acc: 0.7560, test_acc: 0.7830
+pavpu
+tensor([0.2040, 0.7300, 0.7690, 0.7990, 0.8190, 0.8280, 0.8270, 0.8210, 0.8130,
+        0.8000, 0.7970], dtype=torch.float64)
+Run: 10, dropout_rate: 0.5000,train_acc: 1.0000, val_acc: 0.7620, test_acc: 0.7850
+pavpu
+tensor([0.2020, 0.7040, 0.7610, 0.7910, 0.8120, 0.8290, 0.8210, 0.8170, 0.8070,
+        0.8040, 0.7990], dtype=torch.float64)
+Experiment: default_exp_name
+Binarized: 1,Precision sparsity: 0,Dropout rate: 0.500,Dropout mode: input,samples : 20,Bayesian layers : 2, Test Accuracy: 0.7839, std: 0.0089
+Create a 4-layered Bi-GCN.
+Layer 0, in_dim 1433, out_dim 256
+Layer 1, in_dim 256, out_dim 256
+Layer 2, in_dim 256, out_dim 256
+Layer 3, in_dim 256, out_dim 7
+Run: 1, dropout_rate: 0.2500,train_acc: 1.0000, val_acc: 0.7600, test_acc: 0.7980
+pavpu
+tensor([0.2080, 0.7380, 0.7610, 0.7820, 0.8030, 0.8220, 0.8080, 0.8040, 0.7960,
+        0.7890, 0.7910], dtype=torch.float64)
+Run: 2, dropout_rate: 0.2500,train_acc: 1.0000, val_acc: 0.7880, test_acc: 0.8010
+pavpu
+tensor([0.2000, 0.7170, 0.7630, 0.7920, 0.8220, 0.8180, 0.8050, 0.8020, 0.8030,
+        0.8000, 0.8010], dtype=torch.float64)
+Run: 3, dropout_rate: 0.2500,train_acc: 1.0000, val_acc: 0.7700, test_acc: 0.7970
+pavpu
+tensor([0.2060, 0.7180, 0.7640, 0.7870, 0.7970, 0.8090, 0.8070, 0.8060, 0.7950,
+        0.7980, 0.7950], dtype=torch.float64)
+Run: 4, dropout_rate: 0.2500,train_acc: 1.0000, val_acc: 0.7580, test_acc: 0.7880
+pavpu
+tensor([0.2060, 0.7260, 0.7650, 0.7830, 0.8100, 0.8090, 0.8120, 0.8080, 0.8060,
+        0.7960, 0.7930], dtype=torch.float64)
+Run: 5, dropout_rate: 0.2500,train_acc: 1.0000, val_acc: 0.7560, test_acc: 0.7750
+pavpu
+tensor([0.2240, 0.7240, 0.7730, 0.7980, 0.8050, 0.8050, 0.7930, 0.7870, 0.7860,
+        0.7780, 0.7770], dtype=torch.float64)
+Run: 6, dropout_rate: 0.2500,train_acc: 1.0000, val_acc: 0.7480, test_acc: 0.7760
+pavpu
+tensor([0.2210, 0.7260, 0.7690, 0.7960, 0.8090, 0.8000, 0.8080, 0.7960, 0.7980,
+        0.7840, 0.7800], dtype=torch.float64)
+Run: 7, dropout_rate: 0.2500,train_acc: 1.0000, val_acc: 0.7880, test_acc: 0.7880
+pavpu
+tensor([0.2040, 0.7190, 0.7590, 0.7870, 0.8090, 0.8080, 0.7970, 0.8000, 0.8010,
+        0.7950, 0.7970], dtype=torch.float64)
+Run: 8, dropout_rate: 0.2500,train_acc: 1.0000, val_acc: 0.7580, test_acc: 0.7960
+pavpu
+tensor([0.2060, 0.7190, 0.7730, 0.7990, 0.8080, 0.8070, 0.8140, 0.8210, 0.8130,
+        0.8010, 0.7930], dtype=torch.float64)
+Run: 9, dropout_rate: 0.2500,train_acc: 1.0000, val_acc: 0.7760, test_acc: 0.7900
+pavpu
+tensor([0.2080, 0.7260, 0.7650, 0.7790, 0.8000, 0.8080, 0.8110, 0.8070, 0.7990,
+        0.7970, 0.7910], dtype=torch.float64)
+Run: 10, dropout_rate: 0.2500,train_acc: 1.0000, val_acc: 0.7700, test_acc: 0.7990
+pavpu
+tensor([0.2090, 0.7210, 0.7830, 0.8130, 0.8320, 0.8280, 0.8240, 0.8130, 0.8040,
+        0.7940, 0.7900], dtype=torch.float64)
+Experiment: default_exp_name
+Binarized: 1,Precision sparsity: 0,Dropout rate: 0.250,Dropout mode: output,samples : 20,Bayesian layers : 2, Test Accuracy: 0.7908, std: 0.0093
+Create a 4-layered Bi-GCN.
+Layer 0, in_dim 1433, out_dim 256
+Layer 1, in_dim 256, out_dim 256
+Layer 2, in_dim 256, out_dim 256
+Layer 3, in_dim 256, out_dim 7
+Run: 1, dropout_rate: 0.2500,train_acc: 1.0000, val_acc: 0.7660, test_acc: 0.7920
+pavpu
+tensor([0.2040, 0.7390, 0.7680, 0.7950, 0.8110, 0.8060, 0.8140, 0.8090, 0.8010,
+        0.7960, 0.7970], dtype=torch.float64)
+Run: 2, dropout_rate: 0.2500,train_acc: 1.0000, val_acc: 0.7740, test_acc: 0.7970
+pavpu
+tensor([0.1990, 0.7320, 0.7900, 0.8010, 0.8230, 0.8180, 0.8100, 0.8090, 0.8070,
+        0.8040, 0.8010], dtype=torch.float64)
+Run: 3, dropout_rate: 0.2500,train_acc: 1.0000, val_acc: 0.7500, test_acc: 0.7800
+pavpu
+tensor([0.2140, 0.7490, 0.7870, 0.8020, 0.8260, 0.8250, 0.8190, 0.7980, 0.7970,
+        0.7860, 0.7870], dtype=torch.float64)
+Run: 4, dropout_rate: 0.2500,train_acc: 1.0000, val_acc: 0.7900, test_acc: 0.7950
+pavpu
+tensor([0.2040, 0.7480, 0.7910, 0.8220, 0.8270, 0.8150, 0.8140, 0.8050, 0.7970,
+        0.7950, 0.7950], dtype=torch.float64)
+Run: 5, dropout_rate: 0.2500,train_acc: 1.0000, val_acc: 0.7720, test_acc: 0.7930
+pavpu
+tensor([0.2070, 0.7120, 0.7630, 0.7800, 0.8010, 0.8070, 0.8080, 0.8080, 0.7970,
+        0.7950, 0.7920], dtype=torch.float64)
+Run: 6, dropout_rate: 0.2500,train_acc: 1.0000, val_acc: 0.7560, test_acc: 0.7770
+pavpu
+tensor([0.2150, 0.7300, 0.7780, 0.8070, 0.8160, 0.8290, 0.8270, 0.8100, 0.7950,
+        0.7900, 0.7860], dtype=torch.float64)
+Run: 7, dropout_rate: 0.2500,train_acc: 1.0000, val_acc: 0.7680, test_acc: 0.8030
+pavpu
+tensor([0.2030, 0.7520, 0.7860, 0.8020, 0.8180, 0.8240, 0.8120, 0.8110, 0.8070,
+        0.7970, 0.7960], dtype=torch.float64)
+Run: 8, dropout_rate: 0.2500,train_acc: 1.0000, val_acc: 0.7560, test_acc: 0.7920
+pavpu
+tensor([0.2090, 0.7240, 0.7650, 0.7940, 0.8130, 0.8110, 0.8090, 0.7990, 0.7930,
+        0.7920, 0.7920], dtype=torch.float64)
+Run: 9, dropout_rate: 0.2500,train_acc: 1.0000, val_acc: 0.7580, test_acc: 0.7940
+pavpu
+tensor([0.2040, 0.7070, 0.7530, 0.7840, 0.8080, 0.8150, 0.8130, 0.8100, 0.8000,
+        0.7990, 0.7960], dtype=torch.float64)
+Run: 10, dropout_rate: 0.2500,train_acc: 1.0000, val_acc: 0.7760, test_acc: 0.7900
+pavpu
+tensor([0.2100, 0.7230, 0.7820, 0.8060, 0.8120, 0.8180, 0.8160, 0.8050, 0.7990,
+        0.7960, 0.7910], dtype=torch.float64)
+Experiment: default_exp_name
+Binarized: 1,Precision sparsity: 0,Dropout rate: 0.250,Dropout mode: input,samples : 20,Bayesian layers : 2, Test Accuracy: 0.7913, std: 0.0077
+Create a 4-layered Bi-GCN.
+Layer 0, in_dim 1433, out_dim 256
+Layer 1, in_dim 256, out_dim 256
+Layer 2, in_dim 256, out_dim 256
+Layer 3, in_dim 256, out_dim 7
+Run: 1, dropout_rate: 0.1250,train_acc: 1.0000, val_acc: 0.7500, test_acc: 0.7870
+pavpu
+tensor([0.2150, 0.7320, 0.7720, 0.7950, 0.8020, 0.8010, 0.7990, 0.7980, 0.7900,
+        0.7860, 0.7860], dtype=torch.float64)
+Run: 2, dropout_rate: 0.1250,train_acc: 1.0000, val_acc: 0.7820, test_acc: 0.7940
+pavpu
+tensor([0.2180, 0.7610, 0.7850, 0.8130, 0.8080, 0.8070, 0.8050, 0.7890, 0.7860,
+        0.7820, 0.7810], dtype=torch.float64)
+Run: 3, dropout_rate: 0.1250,train_acc: 1.0000, val_acc: 0.7680, test_acc: 0.7890
+pavpu
+tensor([0.2100, 0.6940, 0.7510, 0.7760, 0.7940, 0.8070, 0.8060, 0.8020, 0.8020,
+        0.7940, 0.7910], dtype=torch.float64)
+Run: 4, dropout_rate: 0.1250,train_acc: 1.0000, val_acc: 0.7720, test_acc: 0.7850
+pavpu
+tensor([0.2120, 0.7230, 0.7630, 0.7850, 0.7920, 0.8050, 0.8050, 0.7980, 0.7930,
+        0.7890, 0.7890], dtype=torch.float64)
+Run: 5, dropout_rate: 0.1250,train_acc: 1.0000, val_acc: 0.7780, test_acc: 0.8050
+pavpu
+tensor([0.1950, 0.7370, 0.7700, 0.7900, 0.8090, 0.8230, 0.8120, 0.8120, 0.8080,
+        0.8080, 0.8060], dtype=torch.float64)
+Run: 6, dropout_rate: 0.1250,train_acc: 1.0000, val_acc: 0.7740, test_acc: 0.8080
+pavpu
+tensor([0.1910, 0.7320, 0.7750, 0.8130, 0.8280, 0.8310, 0.8210, 0.8260, 0.8150,
+        0.8110, 0.8080], dtype=torch.float64)
+Run: 7, dropout_rate: 0.1250,train_acc: 1.0000, val_acc: 0.7680, test_acc: 0.7890
+pavpu
+tensor([0.2080, 0.7320, 0.7740, 0.7890, 0.8050, 0.8030, 0.8010, 0.8090, 0.7990,
+        0.7960, 0.7930], dtype=torch.float64)
+Run: 8, dropout_rate: 0.1250,train_acc: 1.0000, val_acc: 0.7520, test_acc: 0.7690
+pavpu
+tensor([0.2270, 0.7200, 0.7740, 0.8010, 0.8120, 0.8040, 0.8010, 0.7800, 0.7810,
+        0.7760, 0.7720], dtype=torch.float64)
+Run: 9, dropout_rate: 0.1250,train_acc: 1.0000, val_acc: 0.7640, test_acc: 0.7980
+pavpu
+tensor([0.1970, 0.7440, 0.7700, 0.7870, 0.8000, 0.8040, 0.8050, 0.8130, 0.8110,
+        0.8060, 0.8040], dtype=torch.float64)
+Run: 10, dropout_rate: 0.1250,train_acc: 1.0000, val_acc: 0.7400, test_acc: 0.7840
+pavpu
+tensor([0.2170, 0.7260, 0.7610, 0.7910, 0.8140, 0.8130, 0.8050, 0.7950, 0.7890,
+        0.7860, 0.7840], dtype=torch.float64)
+Experiment: default_exp_name
+Binarized: 1,Precision sparsity: 0,Dropout rate: 0.125,Dropout mode: output,samples : 20,Bayesian layers : 2, Test Accuracy: 0.7908, std: 0.0112
+Create a 4-layered Bi-GCN.
+Layer 0, in_dim 1433, out_dim 256
+Layer 1, in_dim 256, out_dim 256
+Layer 2, in_dim 256, out_dim 256
+Layer 3, in_dim 256, out_dim 7
+Run: 1, dropout_rate: 0.1250,train_acc: 1.0000, val_acc: 0.7900, test_acc: 0.7910
+pavpu
+tensor([0.2120, 0.7370, 0.7880, 0.7960, 0.8070, 0.8070, 0.8050, 0.7930, 0.7930,
+        0.7910, 0.7890], dtype=torch.float64)
+Run: 2, dropout_rate: 0.1250,train_acc: 1.0000, val_acc: 0.7680, test_acc: 0.7780
+pavpu
+tensor([0.2210, 0.7340, 0.7610, 0.7880, 0.7970, 0.8130, 0.8060, 0.8050, 0.7970,
+        0.7850, 0.7800], dtype=torch.float64)
+Run: 3, dropout_rate: 0.1250,train_acc: 1.0000, val_acc: 0.7640, test_acc: 0.8030
+pavpu
+tensor([0.2030, 0.7380, 0.7710, 0.7940, 0.8100, 0.8110, 0.8170, 0.8080, 0.7970,
+        0.7960, 0.7960], dtype=torch.float64)
+Run: 4, dropout_rate: 0.1250,train_acc: 1.0000, val_acc: 0.7720, test_acc: 0.8010
+pavpu
+tensor([0.1970, 0.7380, 0.7800, 0.8040, 0.8020, 0.8150, 0.8180, 0.8120, 0.8050,
+        0.8060, 0.8040], dtype=torch.float64)
+Run: 5, dropout_rate: 0.1250,train_acc: 1.0000, val_acc: 0.7580, test_acc: 0.8010
+pavpu
+tensor([0.2010, 0.7430, 0.7840, 0.8000, 0.8130, 0.8150, 0.8130, 0.8020, 0.7990,
+        0.8000, 0.7980], dtype=torch.float64)
+Run: 6, dropout_rate: 0.1250,train_acc: 1.0000, val_acc: 0.7680, test_acc: 0.7990
+pavpu
+tensor([0.1980, 0.7150, 0.7580, 0.7820, 0.8120, 0.8180, 0.8200, 0.8100, 0.8050,
+        0.8010, 0.8010], dtype=torch.float64)
+Run: 7, dropout_rate: 0.1250,train_acc: 1.0000, val_acc: 0.7740, test_acc: 0.7880
+pavpu
+tensor([0.2020, 0.7250, 0.7580, 0.7890, 0.8060, 0.8060, 0.8040, 0.8130, 0.8090,
+        0.8020, 0.7990], dtype=torch.float64)
+Run: 8, dropout_rate: 0.1250,train_acc: 1.0000, val_acc: 0.7680, test_acc: 0.7970
+pavpu
+tensor([0.2040, 0.7610, 0.7980, 0.8120, 0.8250, 0.8180, 0.8120, 0.8020, 0.8010,
+        0.7970, 0.7970], dtype=torch.float64)
+Run: 9, dropout_rate: 0.1250,train_acc: 1.0000, val_acc: 0.7680, test_acc: 0.7800
+pavpu
+tensor([0.2100, 0.7440, 0.7710, 0.7950, 0.8070, 0.8120, 0.7970, 0.7950, 0.7890,
+        0.7900, 0.7910], dtype=torch.float64)
+Run: 10, dropout_rate: 0.1250,train_acc: 1.0000, val_acc: 0.7760, test_acc: 0.7870
+pavpu
+tensor([0.2160, 0.7320, 0.7640, 0.7830, 0.7990, 0.8180, 0.8090, 0.7990, 0.7920,
+        0.7910, 0.7840], dtype=torch.float64)
+Experiment: default_exp_name
+Binarized: 1,Precision sparsity: 0,Dropout rate: 0.125,Dropout mode: input,samples : 20,Bayesian layers : 2, Test Accuracy: 0.7925, std: 0.0090
+Create a 4-layered Bi-GCN.
+Layer 0, in_dim 1433, out_dim 256
+Layer 1, in_dim 256, out_dim 256
+Layer 2, in_dim 256, out_dim 256
+Layer 3, in_dim 256, out_dim 7
+Run: 1, dropout_rate: 0.5000,train_acc: 1.0000, val_acc: 0.7740, test_acc: 0.7920
+pavpu
+tensor([0.2090, 0.6950, 0.7480, 0.7830, 0.7970, 0.7970, 0.8020, 0.8030, 0.7990,
+        0.7990, 0.7920], dtype=torch.float64)
+Run: 2, dropout_rate: 0.5000,train_acc: 1.0000, val_acc: 0.7460, test_acc: 0.7930
+pavpu
+tensor([0.2040, 0.7040, 0.7560, 0.7760, 0.8000, 0.8210, 0.8110, 0.8050, 0.8040,
+        0.7990, 0.7960], dtype=torch.float64)
+Run: 3, dropout_rate: 0.5000,train_acc: 1.0000, val_acc: 0.7740, test_acc: 0.7890
+pavpu
+tensor([0.2040, 0.6910, 0.7540, 0.7800, 0.7970, 0.8080, 0.8080, 0.8070, 0.7980,
+        0.7940, 0.7950], dtype=torch.float64)
+Run: 4, dropout_rate: 0.5000,train_acc: 1.0000, val_acc: 0.7780, test_acc: 0.7770
+pavpu
+tensor([0.2240, 0.6730, 0.7350, 0.7820, 0.8140, 0.8030, 0.8080, 0.8080, 0.7900,
+        0.7840, 0.7770], dtype=torch.float64)
+Run: 5, dropout_rate: 0.5000,train_acc: 1.0000, val_acc: 0.7660, test_acc: 0.7870
+pavpu
+tensor([0.2160, 0.7090, 0.7570, 0.7850, 0.8100, 0.8130, 0.8030, 0.8020, 0.7950,
+        0.7890, 0.7850], dtype=torch.float64)
+Run: 6, dropout_rate: 0.5000,train_acc: 0.9929, val_acc: 0.7720, test_acc: 0.7960
+pavpu
+tensor([0.2050, 0.7130, 0.7590, 0.7970, 0.8150, 0.8170, 0.8230, 0.8210, 0.8120,
+        0.7990, 0.7940], dtype=torch.float64)
+Run: 7, dropout_rate: 0.5000,train_acc: 1.0000, val_acc: 0.7700, test_acc: 0.7840
+pavpu
+tensor([0.2180, 0.7060, 0.7620, 0.7950, 0.8000, 0.8000, 0.7990, 0.7950, 0.7870,
+        0.7810, 0.7810], dtype=torch.float64)
+Run: 8, dropout_rate: 0.5000,train_acc: 1.0000, val_acc: 0.7660, test_acc: 0.7830
+pavpu
+tensor([0.2170, 0.6970, 0.7510, 0.7830, 0.7910, 0.8030, 0.8100, 0.8090, 0.8040,
+        0.7910, 0.7840], dtype=torch.float64)
+Run: 9, dropout_rate: 0.5000,train_acc: 1.0000, val_acc: 0.7880, test_acc: 0.8070
+pavpu
+tensor([0.2000, 0.6860, 0.7360, 0.7710, 0.7860, 0.8110, 0.8170, 0.8080, 0.8050,
+        0.8060, 0.8010], dtype=torch.float64)
+Run: 10, dropout_rate: 0.5000,train_acc: 1.0000, val_acc: 0.7780, test_acc: 0.7870
+pavpu
+tensor([0.2090, 0.6940, 0.7430, 0.7670, 0.8040, 0.8080, 0.8000, 0.7990, 0.7970,
+        0.7960, 0.7920], dtype=torch.float64)
+Experiment: default_exp_name
+Binarized: 1,Precision sparsity: 0,Dropout rate: 0.500,Dropout mode: output,samples : 20,Bayesian layers : 1, Test Accuracy: 0.7895, std: 0.0082
+Create a 4-layered Bi-GCN.
+Layer 0, in_dim 1433, out_dim 256
+Layer 1, in_dim 256, out_dim 256
+Layer 2, in_dim 256, out_dim 256
+Layer 3, in_dim 256, out_dim 7
+Run: 1, dropout_rate: 0.5000,train_acc: 1.0000, val_acc: 0.7620, test_acc: 0.7880
+pavpu
+tensor([0.2140, 0.7290, 0.7760, 0.8050, 0.8170, 0.8170, 0.8160, 0.7990, 0.7920,
+        0.7930, 0.7870], dtype=torch.float64)
+Run: 2, dropout_rate: 0.5000,train_acc: 1.0000, val_acc: 0.7600, test_acc: 0.7950
+pavpu
+tensor([0.1990, 0.7240, 0.7600, 0.7880, 0.7970, 0.8190, 0.8170, 0.8110, 0.8050,
+        0.8020, 0.8020], dtype=torch.float64)
+Run: 3, dropout_rate: 0.5000,train_acc: 1.0000, val_acc: 0.7460, test_acc: 0.7850
+pavpu
+tensor([0.2070, 0.7260, 0.7710, 0.7910, 0.8120, 0.8190, 0.8100, 0.8080, 0.7930,
+        0.7900, 0.7920], dtype=torch.float64)
+Run: 4, dropout_rate: 0.5000,train_acc: 1.0000, val_acc: 0.7640, test_acc: 0.7870
+pavpu
+tensor([0.2130, 0.7490, 0.7680, 0.7920, 0.8100, 0.8190, 0.8090, 0.8030, 0.7950,
+        0.7940, 0.7880], dtype=torch.float64)
+Run: 5, dropout_rate: 0.5000,train_acc: 1.0000, val_acc: 0.7700, test_acc: 0.7820
+pavpu
+tensor([0.2080, 0.7230, 0.7410, 0.7840, 0.8040, 0.8140, 0.8080, 0.7990, 0.7950,
+        0.7920, 0.7910], dtype=torch.float64)
+Run: 6, dropout_rate: 0.5000,train_acc: 0.9929, val_acc: 0.7580, test_acc: 0.7970
+pavpu
+tensor([0.2130, 0.7220, 0.7820, 0.8040, 0.8220, 0.8210, 0.8120, 0.7970, 0.7910,
+        0.7880, 0.7880], dtype=torch.float64)
+Run: 7, dropout_rate: 0.5000,train_acc: 1.0000, val_acc: 0.7740, test_acc: 0.7910
+pavpu
+tensor([0.2020, 0.7220, 0.7620, 0.7880, 0.8000, 0.8030, 0.8070, 0.8100, 0.8030,
+        0.8000, 0.7970], dtype=torch.float64)
+Run: 8, dropout_rate: 0.5000,train_acc: 1.0000, val_acc: 0.7780, test_acc: 0.7810
+pavpu
+tensor([0.2080, 0.7070, 0.7560, 0.7740, 0.8030, 0.8140, 0.8140, 0.8070, 0.8000,
+        0.7980, 0.7930], dtype=torch.float64)
+Run: 9, dropout_rate: 0.5000,train_acc: 1.0000, val_acc: 0.7680, test_acc: 0.7980
+pavpu
+tensor([0.1990, 0.7120, 0.7730, 0.8070, 0.8230, 0.8190, 0.8170, 0.8100, 0.8050,
+        0.8020, 0.8000], dtype=torch.float64)
+Run: 10, dropout_rate: 0.5000,train_acc: 1.0000, val_acc: 0.7620, test_acc: 0.7930
+pavpu
+tensor([0.2120, 0.7160, 0.7750, 0.8060, 0.8330, 0.8200, 0.8150, 0.8000, 0.7880,
+        0.7880, 0.7890], dtype=torch.float64)
+Experiment: default_exp_name
+Binarized: 1,Precision sparsity: 0,Dropout rate: 0.500,Dropout mode: input,samples : 20,Bayesian layers : 1, Test Accuracy: 0.7897, std: 0.0061
+Create a 4-layered Bi-GCN.
+Layer 0, in_dim 1433, out_dim 256
+Layer 1, in_dim 256, out_dim 256
+Layer 2, in_dim 256, out_dim 256
+Layer 3, in_dim 256, out_dim 7
+Run: 1, dropout_rate: 0.2500,train_acc: 1.0000, val_acc: 0.7780, test_acc: 0.7960
+pavpu
+tensor([0.2020, 0.7090, 0.7660, 0.7830, 0.8090, 0.8160, 0.8080, 0.8070, 0.8040,
+        0.8000, 0.7990], dtype=torch.float64)
+Run: 2, dropout_rate: 0.2500,train_acc: 1.0000, val_acc: 0.7680, test_acc: 0.7900
+pavpu
+tensor([0.2100, 0.7140, 0.7740, 0.7980, 0.8130, 0.8250, 0.8250, 0.8110, 0.7930,
+        0.7890, 0.7890], dtype=torch.float64)
+Run: 3, dropout_rate: 0.2500,train_acc: 1.0000, val_acc: 0.7640, test_acc: 0.7980
+pavpu
+tensor([0.2010, 0.6920, 0.7420, 0.7750, 0.7980, 0.8130, 0.8100, 0.8080, 0.8040,
+        0.7970, 0.7990], dtype=torch.float64)
+Run: 4, dropout_rate: 0.2500,train_acc: 1.0000, val_acc: 0.7800, test_acc: 0.7730
+pavpu
+tensor([0.2190, 0.7110, 0.7570, 0.7770, 0.7910, 0.8000, 0.7930, 0.7900, 0.7870,
+        0.7840, 0.7820], dtype=torch.float64)
+Run: 5, dropout_rate: 0.2500,train_acc: 1.0000, val_acc: 0.7360, test_acc: 0.7830
+pavpu
+tensor([0.2130, 0.7170, 0.7670, 0.7960, 0.8040, 0.8130, 0.8120, 0.8090, 0.7990,
+        0.7910, 0.7880], dtype=torch.float64)
+Run: 6, dropout_rate: 0.2500,train_acc: 1.0000, val_acc: 0.7700, test_acc: 0.8000
+pavpu
+tensor([0.1980, 0.7260, 0.7820, 0.7930, 0.8020, 0.8100, 0.8090, 0.8090, 0.8070,
+        0.8030, 0.8030], dtype=torch.float64)
+Run: 7, dropout_rate: 0.2500,train_acc: 1.0000, val_acc: 0.7760, test_acc: 0.8060
+pavpu
+tensor([0.1960, 0.7130, 0.7620, 0.7990, 0.8190, 0.8250, 0.8250, 0.8150, 0.8090,
+        0.8050, 0.8030], dtype=torch.float64)
+Run: 8, dropout_rate: 0.2500,train_acc: 1.0000, val_acc: 0.7580, test_acc: 0.8010
+pavpu
+tensor([0.1970, 0.7230, 0.7680, 0.7860, 0.7980, 0.8070, 0.8130, 0.8220, 0.8080,
+        0.8070, 0.8040], dtype=torch.float64)
+Run: 9, dropout_rate: 0.2500,train_acc: 1.0000, val_acc: 0.7680, test_acc: 0.7850
+pavpu
+tensor([0.2140, 0.7230, 0.7610, 0.7960, 0.8010, 0.8040, 0.7970, 0.7990, 0.8000,
+        0.7910, 0.7870], dtype=torch.float64)
+Run: 10, dropout_rate: 0.2500,train_acc: 1.0000, val_acc: 0.7740, test_acc: 0.7870
+pavpu
+tensor([0.2080, 0.7220, 0.7630, 0.8010, 0.8100, 0.8190, 0.8190, 0.8060, 0.8030,
+        0.7950, 0.7930], dtype=torch.float64)
+Experiment: default_exp_name
+Binarized: 1,Precision sparsity: 0,Dropout rate: 0.250,Dropout mode: output,samples : 20,Bayesian layers : 1, Test Accuracy: 0.7919, std: 0.0101
+Create a 4-layered Bi-GCN.
+Layer 0, in_dim 1433, out_dim 256
+Layer 1, in_dim 256, out_dim 256
+Layer 2, in_dim 256, out_dim 256
+Layer 3, in_dim 256, out_dim 7
+Run: 1, dropout_rate: 0.2500,train_acc: 1.0000, val_acc: 0.7560, test_acc: 0.7650
+pavpu
+tensor([0.2200, 0.7320, 0.7800, 0.7830, 0.7940, 0.7950, 0.7920, 0.7870, 0.7840,
+        0.7840, 0.7810], dtype=torch.float64)
+Run: 2, dropout_rate: 0.2500,train_acc: 1.0000, val_acc: 0.7600, test_acc: 0.8010
+pavpu
+tensor([0.2000, 0.7170, 0.7550, 0.7880, 0.7910, 0.8060, 0.8190, 0.8150, 0.8130,
+        0.7990, 0.7990], dtype=torch.float64)
+Run: 3, dropout_rate: 0.2500,train_acc: 1.0000, val_acc: 0.7780, test_acc: 0.7750
+pavpu
+tensor([0.2170, 0.7600, 0.7840, 0.7950, 0.8030, 0.8140, 0.8050, 0.7970, 0.7900,
+        0.7870, 0.7830], dtype=torch.float64)
+Run: 4, dropout_rate: 0.2500,train_acc: 1.0000, val_acc: 0.7780, test_acc: 0.8000
+pavpu
+tensor([0.1990, 0.7280, 0.7800, 0.8170, 0.8240, 0.8330, 0.8210, 0.8110, 0.8090,
+        0.8030, 0.8020], dtype=torch.float64)
+Run: 5, dropout_rate: 0.2500,train_acc: 1.0000, val_acc: 0.7720, test_acc: 0.7910
+pavpu
+tensor([0.2160, 0.7540, 0.7980, 0.8080, 0.8160, 0.8100, 0.8110, 0.7970, 0.7910,
+        0.7870, 0.7830], dtype=torch.float64)
+Run: 6, dropout_rate: 0.2500,train_acc: 1.0000, val_acc: 0.7700, test_acc: 0.7810
+pavpu
+tensor([0.2060, 0.7540, 0.7900, 0.8050, 0.8110, 0.8070, 0.8070, 0.8050, 0.8010,
+        0.7980, 0.7930], dtype=torch.float64)
+Run: 7, dropout_rate: 0.2500,train_acc: 1.0000, val_acc: 0.7600, test_acc: 0.7880
+pavpu
+tensor([0.2130, 0.7370, 0.7860, 0.8000, 0.8050, 0.8010, 0.8050, 0.8070, 0.8030,
+        0.7920, 0.7880], dtype=torch.float64)
+Run: 8, dropout_rate: 0.2500,train_acc: 1.0000, val_acc: 0.7580, test_acc: 0.7990
+pavpu
+tensor([0.2050, 0.7370, 0.7800, 0.7940, 0.8100, 0.8190, 0.8220, 0.8130, 0.8030,
+        0.7990, 0.7960], dtype=torch.float64)
+Run: 9, dropout_rate: 0.2500,train_acc: 1.0000, val_acc: 0.7760, test_acc: 0.7950
+pavpu
+tensor([0.2140, 0.7530, 0.7850, 0.8100, 0.8260, 0.8290, 0.8210, 0.8060, 0.7960,
+        0.7890, 0.7870], dtype=torch.float64)
+Run: 10, dropout_rate: 0.2500,train_acc: 1.0000, val_acc: 0.7740, test_acc: 0.7990
+pavpu
+tensor([0.1980, 0.7300, 0.7880, 0.8160, 0.8240, 0.8210, 0.8280, 0.8180, 0.8060,
+        0.8020, 0.8030], dtype=torch.float64)
+Experiment: default_exp_name
+Binarized: 1,Precision sparsity: 0,Dropout rate: 0.250,Dropout mode: input,samples : 20,Bayesian layers : 1, Test Accuracy: 0.7894, std: 0.0122
+Create a 4-layered Bi-GCN.
+Layer 0, in_dim 1433, out_dim 256
+Layer 1, in_dim 256, out_dim 256
+Layer 2, in_dim 256, out_dim 256
+Layer 3, in_dim 256, out_dim 7
+Run: 1, dropout_rate: 0.1250,train_acc: 1.0000, val_acc: 0.7720, test_acc: 0.7830
+pavpu
+tensor([0.2210, 0.7380, 0.7810, 0.7950, 0.8110, 0.8130, 0.8040, 0.7980, 0.7870,
+        0.7780, 0.7780], dtype=torch.float64)
+Run: 2, dropout_rate: 0.1250,train_acc: 1.0000, val_acc: 0.7660, test_acc: 0.7850
+pavpu
+tensor([0.2150, 0.7380, 0.7790, 0.8020, 0.8170, 0.8210, 0.8100, 0.8040, 0.7910,
+        0.7870, 0.7860], dtype=torch.float64)
+Run: 3, dropout_rate: 0.1250,train_acc: 1.0000, val_acc: 0.7660, test_acc: 0.7940
+pavpu
+tensor([0.2060, 0.7410, 0.7890, 0.8070, 0.8140, 0.8150, 0.8070, 0.8020, 0.8040,
+        0.7980, 0.7950], dtype=torch.float64)
+Run: 4, dropout_rate: 0.1250,train_acc: 1.0000, val_acc: 0.7680, test_acc: 0.7740
+pavpu
+tensor([0.2250, 0.7510, 0.7900, 0.8020, 0.8140, 0.8070, 0.7990, 0.7980, 0.7900,
+        0.7790, 0.7750], dtype=torch.float64)
+Run: 5, dropout_rate: 0.1250,train_acc: 1.0000, val_acc: 0.7580, test_acc: 0.7920
+pavpu
+tensor([0.2060, 0.7160, 0.7570, 0.7830, 0.8000, 0.8050, 0.8060, 0.8020, 0.8010,
+        0.8000, 0.7950], dtype=torch.float64)
+Run: 6, dropout_rate: 0.1250,train_acc: 1.0000, val_acc: 0.7520, test_acc: 0.7800
+pavpu
+tensor([0.2210, 0.7310, 0.7720, 0.8010, 0.8140, 0.8060, 0.8000, 0.7960, 0.7880,
+        0.7820, 0.7800], dtype=torch.float64)
+Run: 7, dropout_rate: 0.1250,train_acc: 1.0000, val_acc: 0.7740, test_acc: 0.7950
+pavpu
+tensor([0.2070, 0.7240, 0.7610, 0.7860, 0.8060, 0.8040, 0.8020, 0.7950, 0.7930,
+        0.7940, 0.7940], dtype=torch.float64)
+Run: 8, dropout_rate: 0.1250,train_acc: 1.0000, val_acc: 0.7640, test_acc: 0.7860
+pavpu
+tensor([0.2150, 0.7370, 0.7720, 0.8010, 0.8110, 0.8130, 0.8060, 0.7920, 0.7870,
+        0.7870, 0.7860], dtype=torch.float64)
+Run: 9, dropout_rate: 0.1250,train_acc: 1.0000, val_acc: 0.7660, test_acc: 0.7930
+pavpu
+tensor([0.2060, 0.7340, 0.7770, 0.7930, 0.7990, 0.8020, 0.8150, 0.8050, 0.8010,
+        0.7980, 0.7950], dtype=torch.float64)
+Run: 10, dropout_rate: 0.1250,train_acc: 1.0000, val_acc: 0.7820, test_acc: 0.8000
+pavpu
+tensor([0.1990, 0.7460, 0.7750, 0.7950, 0.8080, 0.8120, 0.8110, 0.8120, 0.8110,
+        0.8040, 0.8020], dtype=torch.float64)
+Experiment: default_exp_name
+Binarized: 1,Precision sparsity: 0,Dropout rate: 0.125,Dropout mode: output,samples : 20,Bayesian layers : 1, Test Accuracy: 0.7882, std: 0.0079
+Create a 4-layered Bi-GCN.
+Layer 0, in_dim 1433, out_dim 256
+Layer 1, in_dim 256, out_dim 256
+Layer 2, in_dim 256, out_dim 256
+Layer 3, in_dim 256, out_dim 7
+Run: 1, dropout_rate: 0.1250,train_acc: 1.0000, val_acc: 0.7680, test_acc: 0.7830
+pavpu
+tensor([0.2140, 0.7510, 0.7850, 0.7990, 0.8070, 0.8030, 0.7970, 0.7910, 0.7880,
+        0.7850, 0.7850], dtype=torch.float64)
+Run: 2, dropout_rate: 0.1250,train_acc: 1.0000, val_acc: 0.7720, test_acc: 0.8070
+pavpu
+tensor([0.1900, 0.7610, 0.7800, 0.7940, 0.8150, 0.8250, 0.8270, 0.8230, 0.8120,
+        0.8090, 0.8090], dtype=torch.float64)
+Run: 3, dropout_rate: 0.1250,train_acc: 1.0000, val_acc: 0.7780, test_acc: 0.8070
+pavpu
+tensor([0.1910, 0.7350, 0.7750, 0.7990, 0.8140, 0.8180, 0.8150, 0.8090, 0.8090,
+        0.8090, 0.8100], dtype=torch.float64)
+Run: 4, dropout_rate: 0.1250,train_acc: 1.0000, val_acc: 0.7820, test_acc: 0.7890
+pavpu
+tensor([0.2080, 0.7420, 0.7860, 0.8090, 0.8150, 0.8130, 0.8140, 0.8130, 0.8040,
+        0.7990, 0.7930], dtype=torch.float64)
+Run: 5, dropout_rate: 0.1250,train_acc: 1.0000, val_acc: 0.7680, test_acc: 0.8000
+pavpu
+tensor([0.2060, 0.7440, 0.7670, 0.7870, 0.7970, 0.8130, 0.8190, 0.8150, 0.8060,
+        0.8000, 0.7950], dtype=torch.float64)
+Run: 6, dropout_rate: 0.1250,train_acc: 1.0000, val_acc: 0.7600, test_acc: 0.7990
+pavpu
+tensor([0.1930, 0.7410, 0.7940, 0.8110, 0.8180, 0.8110, 0.8080, 0.8020, 0.8040,
+        0.8070, 0.8080], dtype=torch.float64)
+Run: 7, dropout_rate: 0.1250,train_acc: 1.0000, val_acc: 0.7520, test_acc: 0.7810
+pavpu
+tensor([0.2120, 0.7430, 0.7870, 0.8030, 0.8110, 0.8100, 0.8080, 0.8030, 0.7940,
+        0.7910, 0.7890], dtype=torch.float64)
+Run: 8, dropout_rate: 0.1250,train_acc: 1.0000, val_acc: 0.7640, test_acc: 0.7960
+pavpu
+tensor([0.2030, 0.7670, 0.8100, 0.8200, 0.8360, 0.8310, 0.8330, 0.8200, 0.8080,
+        0.7990, 0.7980], dtype=torch.float64)
+Run: 9, dropout_rate: 0.1250,train_acc: 1.0000, val_acc: 0.7620, test_acc: 0.7730
+pavpu
+tensor([0.2240, 0.7390, 0.7590, 0.7840, 0.7900, 0.7870, 0.7900, 0.7860, 0.7800,
+        0.7760, 0.7770], dtype=torch.float64)
+Run: 10, dropout_rate: 0.1250,train_acc: 1.0000, val_acc: 0.7600, test_acc: 0.7960
+pavpu
+tensor([0.1950, 0.7470, 0.7750, 0.7910, 0.8040, 0.8120, 0.8110, 0.8110, 0.8090,
+        0.8090, 0.8060], dtype=torch.float64)
+Experiment: default_exp_name
+Binarized: 1,Precision sparsity: 0,Dropout rate: 0.125,Dropout mode: input,samples : 20,Bayesian layers : 1, Test Accuracy: 0.7931, std: 0.0113
+Run: 1, dropout_rate: 0.5000, test_acc: 0.7910
+pavpu
+tensor([0.2020, 0.7480, 0.7880, 0.8090, 0.8110, 0.8180, 0.8120, 0.8090, 0.8030,
+        0.8020, 0.7990], dtype=torch.float64)
+Run: 2, dropout_rate: 0.5000, test_acc: 0.7910
+pavpu
+tensor([0.2010, 0.7470, 0.7850, 0.8090, 0.8080, 0.8140, 0.8140, 0.8110, 0.8030,
+        0.8040, 0.8000], dtype=torch.float64)
+Run: 3, dropout_rate: 0.5000, test_acc: 0.7830
+pavpu
+tensor([0.2040, 0.7510, 0.7900, 0.8070, 0.8140, 0.8100, 0.8130, 0.8130, 0.8040,
+        0.8000, 0.7970], dtype=torch.float64)
+Run: 4, dropout_rate: 0.5000, test_acc: 0.7910
+pavpu
+tensor([0.2030, 0.7490, 0.7870, 0.8070, 0.8160, 0.8190, 0.8130, 0.8140, 0.8070,
+        0.8010, 0.7980], dtype=torch.float64)
+Run: 5, dropout_rate: 0.5000, test_acc: 0.7920
+pavpu
+tensor([0.2010, 0.7440, 0.7850, 0.8040, 0.8110, 0.8070, 0.8090, 0.8110, 0.8040,
+        0.8040, 0.8000], dtype=torch.float64)
+Run: 6, dropout_rate: 0.5000, test_acc: 0.7970
+pavpu
+tensor([0.2040, 0.7520, 0.7920, 0.8130, 0.8220, 0.8100, 0.8170, 0.8150, 0.8030,
+        0.8000, 0.7970], dtype=torch.float64)
+Run: 7, dropout_rate: 0.5000, test_acc: 0.7940
+pavpu
+tensor([0.2030, 0.7520, 0.7960, 0.8100, 0.8100, 0.8130, 0.8110, 0.8080, 0.8030,
+        0.8010, 0.7980], dtype=torch.float64)
+Run: 8, dropout_rate: 0.5000, test_acc: 0.7900
+pavpu
+tensor([0.2020, 0.7480, 0.7880, 0.8110, 0.8130, 0.8170, 0.8140, 0.8080, 0.8010,
+        0.8000, 0.7970], dtype=torch.float64)
+Run: 9, dropout_rate: 0.5000, test_acc: 0.8050
+pavpu
+tensor([0.2040, 0.7510, 0.7950, 0.8070, 0.8160, 0.8160, 0.8150, 0.8130, 0.8030,
+        0.8010, 0.7970], dtype=torch.float64)
+Run: 10, dropout_rate: 0.5000, test_acc: 0.7920
+pavpu
+tensor([0.2010, 0.7500, 0.7850, 0.8050, 0.8100, 0.8090, 0.8110, 0.8150, 0.8080,
+        0.8020, 0.8000], dtype=torch.float64)
+Run: 11, dropout_rate: 0.5000, test_acc: 0.7970
+pavpu
+tensor([0.1960, 0.7390, 0.7810, 0.7950, 0.8130, 0.8200, 0.8160, 0.8210, 0.8140,
+        0.8060, 0.8050], dtype=torch.float64)
+Run: 12, dropout_rate: 0.5000, test_acc: 0.7970
+pavpu
+tensor([0.2030, 0.7490, 0.7960, 0.8060, 0.8130, 0.8220, 0.8170, 0.8120, 0.8050,
+        0.8000, 0.7980], dtype=torch.float64)
+Run: 13, dropout_rate: 0.5000, test_acc: 0.7890
+pavpu
+tensor([0.1990, 0.7430, 0.7820, 0.7990, 0.8070, 0.8060, 0.8060, 0.8070, 0.8030,
+        0.8020, 0.8000], dtype=torch.float64)
+Run: 14, dropout_rate: 0.5000, test_acc: 0.7820
+pavpu
+tensor([0.2010, 0.7440, 0.7840, 0.8010, 0.8130, 0.8190, 0.8110, 0.8130, 0.8070,
+        0.8030, 0.8000], dtype=torch.float64)
+Run: 15, dropout_rate: 0.5000, test_acc: 0.7950
+pavpu
+tensor([0.2050, 0.7480, 0.7880, 0.8110, 0.8210, 0.8140, 0.8090, 0.8090, 0.8020,
+        0.7990, 0.7960], dtype=torch.float64)
+Run: 16, dropout_rate: 0.5000, test_acc: 0.7950
+pavpu
+tensor([0.2020, 0.7520, 0.7940, 0.8050, 0.8180, 0.8210, 0.8180, 0.8110, 0.8070,
+        0.8000, 0.7990], dtype=torch.float64)
+Run: 17, dropout_rate: 0.5000, test_acc: 0.7910
+pavpu
+tensor([0.2020, 0.7490, 0.7850, 0.8070, 0.8150, 0.8160, 0.8120, 0.8120, 0.8030,
+        0.8010, 0.7990], dtype=torch.float64)
+Run: 18, dropout_rate: 0.5000, test_acc: 0.7890
+pavpu
+tensor([0.2010, 0.7460, 0.7920, 0.8050, 0.8150, 0.8140, 0.8120, 0.8070, 0.8040,
+        0.8000, 0.7980], dtype=torch.float64)
+Run: 19, dropout_rate: 0.5000, test_acc: 0.7910
+pavpu
+tensor([0.2000, 0.7470, 0.7850, 0.8030, 0.8110, 0.8110, 0.8100, 0.8110, 0.8060,
+        0.8040, 0.8010], dtype=torch.float64)
+Run: 20, dropout_rate: 0.5000, test_acc: 0.7890
+pavpu
+tensor([0.2020, 0.7470, 0.7940, 0.8080, 0.8150, 0.8180, 0.8110, 0.8070, 0.8030,
+        0.8020, 0.7990], dtype=torch.float64)
+Experiment: default_exp_name
+Binarized: 1,Precision sparsity: 0,Dropout rate: 0.500,Dropout mode: output,samples : 20, Bayesian layers : 2,Test Accuracy: 0.7921, std: 0.0050
+tensor(0.7905, dtype=torch.float64)
+Run: 1, dropout_rate: 0.5000, test_acc: 0.7960
+pavpu
+tensor([0.2010, 0.7470, 0.7820, 0.8030, 0.8080, 0.8130, 0.8100, 0.8130, 0.8080,
+        0.7990, 0.8000], dtype=torch.float64)
+Run: 2, dropout_rate: 0.5000, test_acc: 0.8010
+pavpu
+tensor([0.2020, 0.7430, 0.7840, 0.8020, 0.8140, 0.8110, 0.8100, 0.8070, 0.8040,
+        0.8030, 0.7990], dtype=torch.float64)
+Run: 3, dropout_rate: 0.5000, test_acc: 0.7890
+pavpu
+tensor([0.2010, 0.7460, 0.7930, 0.8070, 0.8090, 0.8090, 0.8070, 0.8140, 0.8080,
+        0.8020, 0.8000], dtype=torch.float64)
+Run: 4, dropout_rate: 0.5000, test_acc: 0.8020
+pavpu
+tensor([0.2050, 0.7540, 0.7890, 0.8080, 0.8130, 0.8090, 0.8110, 0.8110, 0.8030,
+        0.7990, 0.7960], dtype=torch.float64)
+Run: 5, dropout_rate: 0.5000, test_acc: 0.7880
+pavpu
+tensor([0.2020, 0.7520, 0.7910, 0.8090, 0.8110, 0.8150, 0.8060, 0.8060, 0.8010,
+        0.8000, 0.7970], dtype=torch.float64)
+Run: 6, dropout_rate: 0.5000, test_acc: 0.7850
+pavpu
+tensor([0.1960, 0.7390, 0.7780, 0.8010, 0.8060, 0.8120, 0.8110, 0.8120, 0.8080,
+        0.8040, 0.8030], dtype=torch.float64)
+Run: 7, dropout_rate: 0.5000, test_acc: 0.7970
+pavpu
+tensor([0.2000, 0.7440, 0.7900, 0.8060, 0.8070, 0.8140, 0.8110, 0.8100, 0.8060,
+        0.8040, 0.8010], dtype=torch.float64)
+Run: 8, dropout_rate: 0.5000, test_acc: 0.7980
+pavpu
+tensor([0.2000, 0.7480, 0.7880, 0.8090, 0.8160, 0.8200, 0.8140, 0.8120, 0.8040,
+        0.8020, 0.8010], dtype=torch.float64)
+Run: 9, dropout_rate: 0.5000, test_acc: 0.8050
+pavpu
+tensor([0.1980, 0.7400, 0.7800, 0.8030, 0.8120, 0.8090, 0.8110, 0.8130, 0.8060,
+        0.8040, 0.8030], dtype=torch.float64)
+Run: 10, dropout_rate: 0.5000, test_acc: 0.7960
+pavpu
+tensor([0.2050, 0.7450, 0.7910, 0.8100, 0.8200, 0.8100, 0.8090, 0.8090, 0.8020,
+        0.7950, 0.7950], dtype=torch.float64)
+Run: 11, dropout_rate: 0.5000, test_acc: 0.8010
+pavpu
+tensor([0.2020, 0.7490, 0.7880, 0.8090, 0.8120, 0.8130, 0.8130, 0.8120, 0.8030,
+        0.8000, 0.7970], dtype=torch.float64)
+Run: 12, dropout_rate: 0.5000, test_acc: 0.7960
+pavpu
+tensor([0.2010, 0.7450, 0.7890, 0.8050, 0.8100, 0.8100, 0.8050, 0.8040, 0.8020,
+        0.8010, 0.8000], dtype=torch.float64)
+Run: 13, dropout_rate: 0.5000, test_acc: 0.7980
+pavpu
+tensor([0.2050, 0.7480, 0.7940, 0.8130, 0.8150, 0.8150, 0.8180, 0.8100, 0.8040,
+        0.7990, 0.7960], dtype=torch.float64)
+Run: 14, dropout_rate: 0.5000, test_acc: 0.7990
+pavpu
+tensor([0.2010, 0.7470, 0.7880, 0.8080, 0.8090, 0.8120, 0.8100, 0.8100, 0.8030,
+        0.8010, 0.8000], dtype=torch.float64)
+Run: 15, dropout_rate: 0.5000, test_acc: 0.8030
+pavpu
+tensor([0.2020, 0.7480, 0.7910, 0.8060, 0.8080, 0.8170, 0.8130, 0.8100, 0.8030,
+        0.8020, 0.7990], dtype=torch.float64)
+Run: 16, dropout_rate: 0.5000, test_acc: 0.7980
+pavpu
+tensor([0.2010, 0.7430, 0.7830, 0.8060, 0.8200, 0.8180, 0.8140, 0.8140, 0.8100,
+        0.8050, 0.8000], dtype=torch.float64)
+Run: 17, dropout_rate: 0.5000, test_acc: 0.7980
+pavpu
+tensor([0.2020, 0.7370, 0.7850, 0.8080, 0.8240, 0.8170, 0.8110, 0.8120, 0.8060,
+        0.8030, 0.7990], dtype=torch.float64)
+Run: 18, dropout_rate: 0.5000, test_acc: 0.7880
+pavpu
+tensor([0.2050, 0.7480, 0.7890, 0.8140, 0.8140, 0.8180, 0.8140, 0.8140, 0.8020,
+        0.7990, 0.7960], dtype=torch.float64)
+Run: 19, dropout_rate: 0.5000, test_acc: 0.7930
+pavpu
+tensor([0.2020, 0.7480, 0.7880, 0.8030, 0.8060, 0.8100, 0.8090, 0.8110, 0.8030,
+        0.8020, 0.7990], dtype=torch.float64)
+Run: 20, dropout_rate: 0.5000, test_acc: 0.7900
+pavpu
+tensor([0.2050, 0.7450, 0.7910, 0.8110, 0.8180, 0.8170, 0.8140, 0.8090, 0.7990,
+        0.7990, 0.7960], dtype=torch.float64)
+Experiment: default_exp_name
+Binarized: 1,Precision sparsity: 0,Dropout rate: 0.500,Dropout mode: output,samples : 15, Bayesian layers : 2,Test Accuracy: 0.7961, std: 0.0055
+tensor(0.7905, dtype=torch.float64)
+Run: 1, dropout_rate: 0.5000, test_acc: 0.7940
+pavpu
+tensor([0.2060, 0.7500, 0.7880, 0.8080, 0.8120, 0.8150, 0.8090, 0.8090, 0.7980,
+        0.7940, 0.7930], dtype=torch.float64)
+Run: 2, dropout_rate: 0.5000, test_acc: 0.8020
+pavpu
+tensor([0.1950, 0.7390, 0.7840, 0.8050, 0.8070, 0.8080, 0.8170, 0.8160, 0.8130,
+        0.8090, 0.8060], dtype=torch.float64)
+Run: 3, dropout_rate: 0.5000, test_acc: 0.7940
+pavpu
+tensor([0.2030, 0.7410, 0.7890, 0.8120, 0.8210, 0.8160, 0.8130, 0.8110, 0.8050,
+        0.7990, 0.7980], dtype=torch.float64)
+Run: 4, dropout_rate: 0.5000, test_acc: 0.7970
+pavpu
+tensor([0.1960, 0.7360, 0.7810, 0.7980, 0.8110, 0.8150, 0.8190, 0.8140, 0.8110,
+        0.8070, 0.8050], dtype=torch.float64)
+Run: 5, dropout_rate: 0.5000, test_acc: 0.7880
+pavpu
+tensor([0.2030, 0.7440, 0.7870, 0.8110, 0.8160, 0.8240, 0.8120, 0.8120, 0.8050,
+        0.7990, 0.7980], dtype=torch.float64)
+Run: 6, dropout_rate: 0.5000, test_acc: 0.7940
+pavpu
+tensor([0.2020, 0.7490, 0.7860, 0.8050, 0.8190, 0.8120, 0.8100, 0.8080, 0.8030,
+        0.7990, 0.7990], dtype=torch.float64)
+Run: 7, dropout_rate: 0.5000, test_acc: 0.7850
+pavpu
+tensor([0.2050, 0.7510, 0.7920, 0.8040, 0.8110, 0.8150, 0.8170, 0.8080, 0.8020,
+        0.8000, 0.7960], dtype=torch.float64)
+Run: 8, dropout_rate: 0.5000, test_acc: 0.7990
+pavpu
+tensor([0.2020, 0.7490, 0.7920, 0.8160, 0.8030, 0.8110, 0.8140, 0.8110, 0.8070,
+        0.8030, 0.7990], dtype=torch.float64)
+Run: 9, dropout_rate: 0.5000, test_acc: 0.7950
+pavpu
+tensor([0.2020, 0.7490, 0.7840, 0.8070, 0.8130, 0.8050, 0.8110, 0.8090, 0.8030,
+        0.8030, 0.7990], dtype=torch.float64)
+Run: 10, dropout_rate: 0.5000, test_acc: 0.7990
+pavpu
+tensor([0.2000, 0.7460, 0.7870, 0.8130, 0.8090, 0.8140, 0.8110, 0.8100, 0.8070,
+        0.8000, 0.7990], dtype=torch.float64)
+Run: 11, dropout_rate: 0.5000, test_acc: 0.7890
+pavpu
+tensor([0.2020, 0.7520, 0.7940, 0.8060, 0.8100, 0.8100, 0.8110, 0.8110, 0.8010,
+        0.8010, 0.7990], dtype=torch.float64)
+Run: 12, dropout_rate: 0.5000, test_acc: 0.7910
+pavpu
+tensor([0.2030, 0.7520, 0.7910, 0.8100, 0.8160, 0.8100, 0.8090, 0.8110, 0.8020,
+        0.8000, 0.7980], dtype=torch.float64)
+Run: 13, dropout_rate: 0.5000, test_acc: 0.7870
+pavpu
+tensor([0.2010, 0.7430, 0.7850, 0.8020, 0.8150, 0.8120, 0.8070, 0.8110, 0.8040,
+        0.8010, 0.8000], dtype=torch.float64)
+Run: 14, dropout_rate: 0.5000, test_acc: 0.7830
+pavpu
+tensor([0.2040, 0.7500, 0.7840, 0.8070, 0.8100, 0.8190, 0.8100, 0.8080, 0.8040,
+        0.8000, 0.7970], dtype=torch.float64)
+Run: 15, dropout_rate: 0.5000, test_acc: 0.7890
+pavpu
+tensor([0.2070, 0.7560, 0.7900, 0.8110, 0.8210, 0.8170, 0.8180, 0.8110, 0.8040,
+        0.7940, 0.7940], dtype=torch.float64)
+Run: 16, dropout_rate: 0.5000, test_acc: 0.8000
+pavpu
+tensor([0.2010, 0.7520, 0.7900, 0.8130, 0.8110, 0.8180, 0.8160, 0.8070, 0.8050,
+        0.8020, 0.8000], dtype=torch.float64)
+Run: 17, dropout_rate: 0.5000, test_acc: 0.8010
+pavpu
+tensor([0.2030, 0.7490, 0.7920, 0.8040, 0.8130, 0.8130, 0.8080, 0.8090, 0.8000,
+        0.8010, 0.7980], dtype=torch.float64)
+Run: 18, dropout_rate: 0.5000, test_acc: 0.7910
+pavpu
+tensor([0.2050, 0.7470, 0.7890, 0.8160, 0.8160, 0.8100, 0.8140, 0.8110, 0.8000,
+        0.7940, 0.7940], dtype=torch.float64)
+Run: 19, dropout_rate: 0.5000, test_acc: 0.7940
+pavpu
+tensor([0.2050, 0.7470, 0.7860, 0.8070, 0.8160, 0.8150, 0.8130, 0.8040, 0.8010,
+        0.7980, 0.7960], dtype=torch.float64)
+Run: 20, dropout_rate: 0.5000, test_acc: 0.7870
+pavpu
+tensor([0.2030, 0.7480, 0.7890, 0.8110, 0.8110, 0.8110, 0.8140, 0.8090, 0.8050,
+        0.8010, 0.7980], dtype=torch.float64)
+Experiment: default_exp_name
+Binarized: 1,Precision sparsity: 0,Dropout rate: 0.500,Dropout mode: output,samples : 10, Bayesian layers : 2,Test Accuracy: 0.7930, std: 0.0056
+tensor(0.7905, dtype=torch.float64)
+Run: 1, dropout_rate: 0.5000, test_acc: 0.7980
+pavpu
+tensor([0.2000, 0.7430, 0.7720, 0.7960, 0.8150, 0.8140, 0.8170, 0.8060, 0.8090,
+        0.8030, 0.8010], dtype=torch.float64)
+Run: 2, dropout_rate: 0.5000, test_acc: 0.7990
+pavpu
+tensor([0.2020, 0.7520, 0.7930, 0.8080, 0.8110, 0.8110, 0.8080, 0.8070, 0.8050,
+        0.8010, 0.7990], dtype=torch.float64)
+Run: 3, dropout_rate: 0.5000, test_acc: 0.7940
+pavpu
+tensor([0.2030, 0.7460, 0.7860, 0.8030, 0.8160, 0.8130, 0.8070, 0.8100, 0.8040,
+        0.8010, 0.7980], dtype=torch.float64)
+Run: 4, dropout_rate: 0.5000, test_acc: 0.7930
+pavpu
+tensor([0.2060, 0.7490, 0.7940, 0.8130, 0.8200, 0.8130, 0.8110, 0.8060, 0.8010,
+        0.7980, 0.7950], dtype=torch.float64)
+Run: 5, dropout_rate: 0.5000, test_acc: 0.8080
+pavpu
+tensor([0.1990, 0.7450, 0.7880, 0.8040, 0.8170, 0.8180, 0.8120, 0.8150, 0.8090,
+        0.8040, 0.8010], dtype=torch.float64)
+Run: 6, dropout_rate: 0.5000, test_acc: 0.7940
+pavpu
+tensor([0.2060, 0.7480, 0.7950, 0.8170, 0.8180, 0.8160, 0.8120, 0.8100, 0.8010,
+        0.7950, 0.7950], dtype=torch.float64)
+Run: 7, dropout_rate: 0.5000, test_acc: 0.7920
+pavpu
+tensor([0.2020, 0.7490, 0.7910, 0.8120, 0.8130, 0.8090, 0.8100, 0.8080, 0.8020,
+        0.8000, 0.7990], dtype=torch.float64)
+Run: 8, dropout_rate: 0.5000, test_acc: 0.7910
+pavpu
+tensor([0.2040, 0.7540, 0.7850, 0.8090, 0.8210, 0.8170, 0.8140, 0.8080, 0.8020,
+        0.7970, 0.7970], dtype=torch.float64)
+Run: 9, dropout_rate: 0.5000, test_acc: 0.7900
+pavpu
+tensor([0.2010, 0.7460, 0.7890, 0.8040, 0.8160, 0.8170, 0.8150, 0.8120, 0.8070,
+        0.8010, 0.8000], dtype=torch.float64)
+Run: 10, dropout_rate: 0.5000, test_acc: 0.7920
+pavpu
+tensor([0.2020, 0.7460, 0.7860, 0.8060, 0.8000, 0.8110, 0.8070, 0.8130, 0.8080,
+        0.8020, 0.7990], dtype=torch.float64)
+Run: 11, dropout_rate: 0.5000, test_acc: 0.8000
+pavpu
+tensor([0.2050, 0.7500, 0.7900, 0.8040, 0.8080, 0.8080, 0.8040, 0.8100, 0.8030,
+        0.7970, 0.7960], dtype=torch.float64)
+Run: 12, dropout_rate: 0.5000, test_acc: 0.8040
+pavpu
+tensor([0.1940, 0.7410, 0.7780, 0.7920, 0.8080, 0.8170, 0.8150, 0.8140, 0.8150,
+        0.8090, 0.8070], dtype=torch.float64)
+Run: 13, dropout_rate: 0.5000, test_acc: 0.7870
+pavpu
+tensor([0.2040, 0.7440, 0.7930, 0.8020, 0.8100, 0.8000, 0.8030, 0.8040, 0.7980,
+        0.7960, 0.7970], dtype=torch.float64)
+Run: 14, dropout_rate: 0.5000, test_acc: 0.7900
+pavpu
+tensor([0.2060, 0.7500, 0.7880, 0.8100, 0.8090, 0.8140, 0.8100, 0.8150, 0.8070,
+        0.8000, 0.7950], dtype=torch.float64)
+Run: 15, dropout_rate: 0.5000, test_acc: 0.7920
+pavpu
+tensor([0.2050, 0.7510, 0.7870, 0.8080, 0.8210, 0.8290, 0.8200, 0.8130, 0.8030,
+        0.7990, 0.7960], dtype=torch.float64)
+Run: 16, dropout_rate: 0.5000, test_acc: 0.7980
+pavpu
+tensor([0.2000, 0.7490, 0.7840, 0.7990, 0.8140, 0.8160, 0.8190, 0.8140, 0.8070,
+        0.8020, 0.8010], dtype=torch.float64)
+Run: 17, dropout_rate: 0.5000, test_acc: 0.7970
+pavpu
+tensor([0.1990, 0.7460, 0.7830, 0.8020, 0.8160, 0.8060, 0.8070, 0.8110, 0.8000,
+        0.8030, 0.8020], dtype=torch.float64)
+Run: 18, dropout_rate: 0.5000, test_acc: 0.8010
+pavpu
+tensor([0.1990, 0.7460, 0.7820, 0.8020, 0.8070, 0.8090, 0.8090, 0.8090, 0.8030,
+        0.8000, 0.8010], dtype=torch.float64)
+Run: 19, dropout_rate: 0.5000, test_acc: 0.7990
+pavpu
+tensor([0.1990, 0.7470, 0.7890, 0.8080, 0.8050, 0.8090, 0.8140, 0.8130, 0.8100,
+        0.8030, 0.8020], dtype=torch.float64)
+Run: 20, dropout_rate: 0.5000, test_acc: 0.7940
+pavpu
+tensor([0.1970, 0.7400, 0.7830, 0.8080, 0.8140, 0.8180, 0.8170, 0.8190, 0.8110,
+        0.8070, 0.8040], dtype=torch.float64)
+Experiment: default_exp_name
+Binarized: 1,Precision sparsity: 0,Dropout rate: 0.500,Dropout mode: output,samples : 5, Bayesian layers : 2,Test Accuracy: 0.7956, std: 0.0052
