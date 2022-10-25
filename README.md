@@ -13,11 +13,14 @@ pip install torch-geometric
 Under python3.8 and PyTorch 11.1, 
 the sparsity exploration experiment can be done by executing the following commands for Cora, PubMed, and Flickr datasets, respectively.
 ```
-python Cora.py
-python PubMed.py
-python Flickr.py
+python python/Cora.py
+python python/PubMed.py
+python python/Flickr.py
 ```
-The result of the experiment are put under ```python/log/```
+The result of the experiment are put under ```python/log/```.
+
+### 2.2
+
 
 
 
