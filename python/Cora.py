@@ -145,7 +145,7 @@ def run(exp_name, data, model, runs, epochs, lr, weight_decay, early_stopping, d
                 val_acc = eval_val
                 epoch_count = epoch
                 pavpu_opt=pavpu
-                if  test_acc > best_accuracy and num_layer ==1:
+                if  test_acc > best_accuracy :
                     torch.save(model,"/mnt/ccnas2/bdp/zw4520/gcn/cora_4layer_3.pkl")
                 #torch.save(model.state_dict(), 'gcn_cora.pkl')
                
@@ -351,15 +351,14 @@ def main():
         model = BiGCN_layerspar(dataset.num_features, args.hidden, dataset.num_classes, args.layers,layer,dropout,dropout2,True,False)
         accuracy = run(args.exp_name, dataset[0], model, args.runs, args.epochs, args.lr, args.weight_decay, args.early_stopping, device,True,False,dropout,dropout2,20,layer,best_accuracy2,save)
          
-        if layer == 0 or layer==1:
-           if accuracy >= best_accuracy2:
+       
+        if accuracy >= best_accuracy2:
               best_accuracy2 =accuracy
               opt_accuracy=accuracy
               opt_dropout= dropout
               opt_dropout_mode= dropout2
               opt_layer=layer
-              if dropout ==0.125 and dropout_mode == 'input':
-                save= False 
+              
                 
               
     for sample in sample_num:
