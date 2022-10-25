@@ -8,3 +8,16 @@ pip install torch-scatter -f https://data.pyg.org/whl/torch-1.11.0+${CUDA}.html
 pip install torch-sparse -f https://data.pyg.org/whl/torch-1.11.0+${CUDA}.html
 pip install torch-geometric
 ```
+## 2. 
+### 2.1 
+Under python3.8 and PyTorch 11.1, 
+the sparsity exploration experiment can be done by executing the following commands for Cora, PubMed, and Flickr datasets, respectively.
+```
+python Cora.py
+python PubMed.py
+python Flickr.py
+```
+The result of the experiment are put under ```python/log/```
+
+
+
