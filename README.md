@@ -22,9 +22,10 @@ The result of the experiment are put under ```python/log/```.
 ### 2.2
 To implement the FPGA design with HLS :   
 
-1. Create a new HLS project with test.cpp, test.h and weiht0.h as the source
-2. Add the test_test.cpp as the test bench
-3. Run C Simulation and Co-Simulation
+1. download the dataset from  ```hls/data```
+2. Create a new HLS project with test.cpp, test.h and weiht0.h as the source
+3. Add the test_test.cpp as the test bench
+4. Run C Simulation and Co-Simulation
 
 
 
