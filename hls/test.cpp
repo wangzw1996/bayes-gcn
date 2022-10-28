@@ -1,4 +1,4 @@
-#include"test.h"
+#include "test.h"
 #include "weight1.h"
 #include <stdint.h>
 #include <cmath>
@@ -39,12 +39,45 @@ void read_data(data_bi in[node][1433],data_t out[node][feature])
 	}
 }
 
+void read_data1(data_in in[node][3],data_t out[node][feature])
+{
+	#pragma HLS ARRAY_PARTITION dim=2 type=complete variable=out
+	#pragma HLS ARRAY_PARTITION dim=2 type=complete variable=in
+	for (int j = 0; j < node; j++)
+	{
+		ap_uint<32> temp;
+
+		for(int m=0; m<3; m++)
+		{
+#pragma HLS UNROLL
+			for (int i = 0; i < 512/32; i++)
+			{
+#pragma HLS UNROLL
+				for (int k = 0; k < 32; k++)
+				{
+#pragma HLS UNROLL
+					if (m*512+i*32+k<1433)
+				    {
+						temp.range(k, k)  = in[j][m].range(i*32+k,i*32+k);
+				    }
+				    else
+				    {
+				    	temp.range(k,k) = 0;
+				    }
+				}
+			    if (m*512/32+i< feature)
+			    {
+			    	out[j][m*512/32+i]=temp;
+			    }
+			}
+		}
+	}
+}
 
 
 
 
-
-void Extraction(data_t in[node][feature], data_t weight[feature][block][6],data_tt beta[node],data_tt alpha[block][6],data_tt bias[block][6],hls::stream<data_tt> inStream[block])
+void Extraction(data_t in[node][feature], data_t weight[feature][block][6],data_tt beta[node],data_tt alpha[block][6],data_tt bias[block][6],hls::stream<data_tt> inStream[block][2])
 {
 #pragma HLS ARRAY_PARTITION dim=1 type=complete variable=weight
 #pragma HLS ARRAY_PARTITION dim=2 type=complete variable=weight
@@ -53,8 +86,10 @@ void Extraction(data_t in[node][feature], data_t weight[feature][block][6],data_
 #pragma HLS ARRAY_PARTITION dim=2 type=complete variable=in
 	for (int m=0; m< 6 ;m++)
 	{
-	for(int l=0;l<node;l++)
+	for(int l=0;l<node/2;l++)
     {
+		for (int j=0; j<2;j++)
+		{
 #pragma HLS PIPELINE
 		for(int i=0;i<block;i++)
 		{
@@ -64,7 +99,7 @@ void Extraction(data_t in[node][feature], data_t weight[feature][block][6],data_
 		    for(int k=0;k<feature;k++)
 		    {
 #pragma HLS UNROLL
-			    temp = in[l][k]^weight[k][i][m];
+			    temp = in[l*2+j][k]^weight[k][i][m];
 			    for(int p=0;p<32;p++)
 			    {
 #pragma HLS UNROLL
@@ -77,9 +112,10 @@ void Extraction(data_t in[node][feature], data_t weight[feature][block][6],data_
 			    }
 		    }
 		    data_tt temp1=0;
-		    temp1 = alpha[i][m]*beta[l]* (1433-2*bitcount1);
-		    inStream[i] << temp1 +bias[i][m];
+		    temp1 = alpha[i][m]*beta[l*2+j]* (1433-2*bitcount1);
+		    inStream[i][j] << temp1 +bias[i][m];
 	     }
+		}
     }
     }
 }
@@ -129,12 +165,42 @@ void cc(data_t weight_in[feature][hidden],data_tt alpha_in[hidden],data_tt bias_
 
 
 
+void Aggregation1(data_tt out10[node],hls::stream<data_tt> inStream[block])
+{
 
 
 
-void Aggregation(data_tt out[block],data_tt out1[block],data_tt out2[block],data_tt out3[block],data_tt out4[block],data_t col[4][edge/4],data_t row[4][edge/4],data_t row1[4][edge/4],hls::stream<data_tt> inStream[block],hls::stream<data_tt> outStream1[block],hls::stream<data_tt> outStream2[block],hls::stream<data_tt> outStream3[block],hls::stream<data_tt> outStream4[block])
+
+data_tt temp[node][block][6][2];
+
+
+for (int m=0;m<6;m++)
+{
+for (int i=0;i<node;i++)
+{
+#pragma HLS PIPELINE
+	for(int j=0;j<block;j++)
+	{
+#pragma HLS UNROLL
+		data_tt temp_in[block];
+		temp_in[j]=inStream[j].read();
+#pragma HLS ARRAY_PARTITION dim=1 type=complete variable=temp_in
+		temp[i][j][m][0] = (temp_in[j]);
+		temp[i][j][m][1] = (temp_in[j]);
+
+	}
+    }
+}
+out10[0]=temp[0][0][0][1];
+}
+
+
+
+
+void Aggregation(data_tt out[node],data_tt out1[block],data_tt out2[block],data_tt out3[block],data_tt out4[block],data_t col[4][edge/4],data_t row[4][edge/4],data_t row1[4][edge/4],hls::stream<data_tt> inStream[block][2],hls::stream<data_tt> outStream1[block],hls::stream<data_tt> outStream2[block],hls::stream<data_tt> outStream3[block],hls::stream<data_tt> outStream4[block])
 {
 #pragma HLS ARRAY_PARTITION dim=1 type=complete variable=row
+#pragma HLS ARRAY_PARTITION dim=1 type=complete variable=row1
 #pragma HLS ARRAY_PARTITION dim=1 type=complete variable=col
 
 #pragma HLS DEPENDENCE variable=out1 inter false
@@ -153,36 +219,38 @@ int temp3_row1=row[2][(edge/4)-1];
 
 
 
-#pragma HLS BIND_STORAGE variable=temp type=ram_2p impl=uram
-#pragma HLS ARRAY_PARTITION dim=2 type=complete variable=temp
-#pragma HLS ARRAY_PARTITION dim=4 type=complete variable=temp
-#pragma HLS ARRAY_PARTITION dim=2 type=complete variable=temp2
-#pragma HLS ARRAY_PARTITION dim=4 type=complete variable=temp2
 
 data_tt temp1[node][block][6];
 	for (int m=0;m<6;m++)
 	{
-		data_tt temp[node][block][2];
+		data_tt temp[node][block][4];
+#pragma HLS ARRAY_PARTITION dim=2 type=complete variable=temp
+#pragma HLS ARRAY_PARTITION dim=3 type=complete variable=temp
 
-		for (int i=0;i<node;i++)
+		for (int i=0;i<node/2;i++)
 		{
 #pragma HLS PIPELINE
+			for (int k=0;k<2;k++)
+			{
+#pragma HLS UNROLL
 			for(int j=0;j<block;j++)
 			{
 #pragma HLS UNROLL
-				data_tt temp_in[block];
-				temp_in[j+k*block]=inStream[j].read();
-				temp[i][j][0] = (temp_in[j]);
-				temp[i][j][1] = (temp_in[j]);
+				data_tt temp_in[block][2];
+				temp_in[j][k]=inStream[j][k].read();
+				temp[i*2+k][j][0] = (temp_in[j][k]);
+				temp[i*2+k][j][1] = (temp_in[j][k]);
+				temp[i*2+k][j][2] = (temp_in[j][k]);
+				temp[i*2+k][j][3] = (temp_in[j][k]);
 
-				temp1[i][j][m] = (temp_in[j]);
-
-
+				temp1[i*2+k][j][m] = (temp_in[j][k]);
+			}
 			}
 		}
 
 		for (int i=0;i<edge/4;i++)
 		{
+#pragma HLS PIPELINE
 			int temp1_row=row1[0][i];
 			int temp1_col=col[0][i];
 			int p_row1=0;
@@ -218,7 +286,7 @@ data_tt temp1[node][block][6];
 
 	       for (int k=0;k<block;k++)
 	       {
-#pragma HLS UNROLL
+
 	    	   if(p_row1 == temp1_row)
 	    	   {
 	    		   out1[k] += temp[temp1_col][k][0];
@@ -264,11 +332,11 @@ data_tt temp1[node][block][6];
 	}
 
 
-	out[0]=temp1[1000][40][5];
-	out[1]=temp1[281][40][5];
-	out[2]=temp1[972][40][5];
-	out[3]=temp1[1325][40][5];
-	out[4]=temp1[2543][40][5];
+	out[0]=temp1[1000][1][0];
+	out[1]=temp1[281][0][0];
+	out[2]=temp1[972][0][0];
+	out[3]=temp1[1325][0][0];
+	out[4]=temp1[2543][0][0];
 
 }
 
@@ -298,6 +366,25 @@ ap_uint<256> sampler( ap_uint<256> seed, int load) {
 
 
 
+void wr1(hls::stream<data_tt> inStream[block],data_out out[node][6])
+{
+  for(int m=0;m<6;m++)
+  {
+	for(int l=0;l<node;l++)
+	{
+		data_out  tmpOut1 = 0;
+		for (int i = 0; i < block; i++)
+		{
+#pragma HLS UNROLL
+
+			tmpOut1.range(32 * (i + 1) - 1, i * 32) = inStream[i].read().range(31, 0);
+		}
+		out[l][m]=tmpOut1;
+	}
+  }
+}
+
+
 
 
 
@@ -309,18 +396,19 @@ void wr(hls::stream<data_tt> outStream1[block],hls::stream<data_tt> outStream2[b
 		mask.range(32 * (i + 1) - 1, i * 32) = 10012903;
 	}
 	sampler(mask, 1);
+
 	for (int m=0; m<6; m++)
 	{
 		for(int l=0;l<node1;l++)
 		{
 			ap_uint<256> mask;
-			mask=sampler(mask,0);
+			//mask=sampler(mask,0);
 			data_out  tmpOut1 = 0;
 			for (int i = 0; i < block; i++)
 			{
 #pragma HLS UNROLL
 				data_bi temp=mask.get_bit(i);
-				tmpOut1.range(32 * (i + 1) - 1, i * 32) = (temp*(outStream1[i].read())).range(31, 0);
+				tmpOut1.range(32 * (i + 1) - 1, i * 32) = ((outStream1[i].read())).range(31, 0);
 			}
 			out[l][m]=tmpOut1;
 		}
@@ -328,57 +416,111 @@ void wr(hls::stream<data_tt> outStream1[block],hls::stream<data_tt> outStream2[b
 		for(int l=0;l<node2;l++)
 		{
 			ap_uint<256> mask;
-			mask=sampler(mask,0);
+			//mask=sampler(mask,0);
 			data_out  tmpOut2 = 0;
 			for (int i = 0; i < block; i++)
 			{
 #pragma HLS UNROLL
 				data_bi temp=mask.get_bit(i);
-				tmpOut2.range(32 * (i + 1) - 1, i * 32) = (temp*(outStream2[i].read())).range(31, 0);
+				tmpOut2.range(32 * (i + 1) - 1, i * 32) = ((outStream2[i].read())).range(31, 0);
 			}
 			out[node1+l-1][m]=tmpOut2;
 		}
-
 		for(int l=0;l<node3;l++)
 		{
 			ap_uint<256> mask;
-			mask=sampler(mask,0);
-			data_out  tmpOut3 = 0;
-			for (int i = 0; i < block; i++)
-			{
-#pragma HLS UNROLL
-				data_bi temp=mask.get_bit(i);
-				tmpOut3.range(32 * (i + 1) - 1, i * 32) = (temp*(outStream3[i].read())).range(31, 0);
-			}
-			out[node1+node2+l-1][m]=tmpOut3;
-		}
+			//mask=sampler(mask,0);
+					data_out  tmpOut3 = 0;
+					for (int i = 0; i < block; i++)
+					{
+		#pragma HLS UNROLL
+						data_bi temp=mask.get_bit(i);
+						tmpOut3.range(32 * (i + 1) - 1, i * 32) = ((outStream3[i].read())).range(31, 0);
+					}
+					out[node1+node2+l-1][m]=tmpOut3;
+				}
 
-	    for(int l=0;l<node4;l++)
-		{
-			ap_uint<256> mask;
-			mask=sampler(mask,0);
-			data_out  tmpOut4 = 0;
-			for (int i = 0; i < block; i++)
-			{
-#pragma HLS UNROLL
-				data_bi temp=mask.get_bit(i);
-				tmpOut4.range(32 * (i + 1) - 1, i * 32) = (temp*(outStream4[i].read())).range(31, 0);
-			}
-			out[node1+node2+node3+l-1][m]=tmpOut4;
-		}
+			    for(int l=0;l<node4;l++)
+				{
+					ap_uint<256> mask;
+					//mask=sampler(mask,0);
+					data_out  tmpOut4 = 0;
+					for (int i = 0; i < block; i++)
+					{
+		#pragma HLS UNROLL
+						data_bi temp=mask.get_bit(i);
+						tmpOut4.range(32 * (i + 1) - 1, i * 32) = ((outStream4[i].read())).range(31, 0);
+					}
+					out[node1+node2+node3+l-2][m]=tmpOut4;
+				}
+
+
 	}
 }
 
 
 
 
+void TopFun1(data_tt out10[node],data_bi in[node][1433], data_tt beta[node],data_out out[node][6])
+{
+#pragma HLS INTERFACE mode=s_axilite port=out storage_impl=uram
+#pragma HLS INTERFACE mode=s_axilite port=beta
+#pragma HLS INTERFACE mode=s_axilite port=in storage_impl=uram
+
+#pragma HLS INTERFACE mode=s_axilite port=return
 
 
 
+	data_t in_buf[node][feature];
+#pragma HLS BIND_STORAGE variable=in_buf type=ram_2p
+	ap_uint<256> mask;
+	for(int i=0;i<8;i++)
+	{
+		mask.range(32 * (i + 1) - 1, i * 32) = 10012903;
+	}
+	read_data(in,in_buf);
+	sampler(mask, 1);
+
+
+	data_t temp_weight[feature][block][6];
+	data_tt temp_alpha[block][6];
+	data_tt temp_bias[block][6];
+      cc(weight,alpha,bias,temp_weight,temp_alpha,temp_bias);
+
+#pragma HLS DATAFLOW
+
+    	data_tt out1[block];
+      	data_tt out3[block];
+
+      	data_tt out2[block];
+    	data_tt out4[block];
+
+
+    static hls::stream<data_tt> inStream[block];
+#pragma HLS BIND_STORAGE variable=inStream type=fifo impl=uram
+#pragma HLS STREAM depth=99 type=fifo variable=inStream
+
+    static hls::stream<data_tt> outStream1[block];
+
+
+#pragma HLS STREAM depth=99 type=fifo variable=outStream1
+    static hls::stream<data_tt> outStream2[block];
+
+    #pragma HLS STREAM depth=99 type=fifo variable=outStream2
+    static hls::stream<data_tt> outStream3[block];
+       #pragma HLS STREAM depth=99 type=fifo variable=outStream3
+    static hls::stream<data_tt> outStream4[block];
+           #pragma HLS STREAM depth=99 type=fifo variable=outStream4
+
+
+    //Extraction(in_buf,temp_weight,beta,temp_alpha,temp_bias,inStream);
+    //Aggregation1(out10,inStream);
+    wr1(inStream,out);
+}
 
 
 
-void TopFun(data_tt out11[block],data_bi in[node][1433], data_tt beta[node],data_t col[4][edge/4],data_t row[4][edge/4],data_t row1[4][edge/4],data_out out[node][6])
+void TopFun(data_tt out11[node],data_bi in[node][1433], data_tt beta[node],data_t col[4][edge/4],data_t row[4][edge/4],data_t row1[4][edge/4],data_out out[node][6])
 {
 #pragma HLS INTERFACE mode=s_axilite port=out storage_impl=uram
 #pragma HLS INTERFACE mode=s_axilite port=row storage_impl=uram
@@ -402,7 +544,7 @@ void TopFun(data_tt out11[block],data_bi in[node][1433], data_tt beta[node],data
 	data_tt temp_bias[block][6];
     cc(weight,alpha,bias,temp_weight,temp_alpha,temp_bias);
 
-#pragma HLS DATAFLOW
+
 
     	data_tt out1[block]={0};
       	data_tt out2[block];
@@ -411,7 +553,7 @@ void TopFun(data_tt out11[block],data_bi in[node][1433], data_tt beta[node],data
     	data_tt out4[block];
 
 
-    static hls::stream<data_tt> inStream[block];
+    static hls::stream<data_tt> inStream[block][2];
 #pragma HLS BIND_STORAGE variable=inStream type=fifo impl=uram
 #pragma HLS STREAM depth=99 type=fifo variable=inStream
 
