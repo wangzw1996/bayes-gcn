@@ -82,6 +82,7 @@ class BinActiveFunction1(Function):
         # size of input: [n, in_channels]
 
         input_b = input.sign()
+        input_b [input_b ==0]=1
         s = input.size()
         alpha = input.norm(1, 1, keepdim=True).div(s[1]).expand(s)
         output = alpha.mul(input_b)
@@ -109,6 +110,7 @@ class BinActiveFunction0(Function):
         # size of input: [n, in_channels]
 
         input_b = input.sign()
+        input_b [input_b ==0]=1
         s = input.size()
         alpha = input.norm(1, 0, keepdim=True).div(s[0]).expand(s)
         output = alpha.mul(input_b)
