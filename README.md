@@ -30,6 +30,7 @@ To implement the FPGA design with HLS :
 
 ### 2.3 HLS Accuracy and Uncertainty Verification 
 1. Run C simulation first to get the output produced by HLS.
+2. Save ```python/model_test.py ``` as ```models.py```
 2. Run ```python python/test.py``` to get the accuracy and uncertainty performance
 
 
