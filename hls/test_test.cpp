@@ -274,7 +274,7 @@ int main()
 
 				for(int j=0;j< hidden;j++)
 					if (j==255)
-												{
+				       {
 													dataFile << 0 ;
 												}
 												else
