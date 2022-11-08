@@ -329,7 +329,7 @@ class BiGCN_layerspar(torch.nn.Module):
                   x = BernoulliDropout(self.dropout)(x) 
             
             if i ==0:
-                temp_x= pd.read_csv('/mnt/ccnas2/bdp/zw4520/data2/out2.csv')
+                temp_x= pd.read_csv('/mnt/ccnas2/bdp/zw4520/data2/cora_out2.csv')
                 tempx=torch.tensor(temp_x.values)
                 tempx=tempx.to(torch.device('cuda:1'))
                 x=tempx.float() 
