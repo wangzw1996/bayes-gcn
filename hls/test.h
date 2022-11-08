@@ -10,7 +10,7 @@
 #define edge 10556
 #define hidden 256
 #define cycle 6
-#define block  3
+#define block  43
 #define avg_degree 4
 #define drop_rate 0.125
 
