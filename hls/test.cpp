@@ -1,4 +1,4 @@
-#include "8.h"
+#include "cora.h"
 #include<hls_stream.h>
 #include <stdint.h>
 #include <cmath>
@@ -221,56 +221,9 @@ int main()
 			}
 		}
 
-	cout << out12[0]<< endl;
-	cout <<temp_out1[7][2][5]<< endl;
-			cout <<temp_out1[7][1][5]<< endl;
-			cout <<temp_out1[7][0][5]<< endl;
-			cout <<temp_out1[8][2][5]<< endl;
-			cout <<temp_out1[8][1][5]<< endl;
-			cout <<temp_out1[8][0][5]<< endl;
-			cout <<temp_out1[9][2][5]<< endl;
-			cout <<temp_out1[9][1][5]<< endl;
-			cout <<temp_out1[9][0][5]<< endl;
-			cout <<temp_out1[8][0][2]<< endl;
-				cout <<temp_out1[9][2][3]<< endl;
-				cout <<temp_out1[9][1][4]<< endl;
-				cout <<temp_out1[9][0][1]<< endl;
-				cout <<temp_out1[0][0][0]<< endl;
-				cout <<temp_out1[1][0][0]<< endl;
-				cout <<temp_out1[1][1][0]<< endl;
-
-				cout <<temp_out1[649][0][0]<< endl;
-				cout <<temp_out1[649][42][3]<< endl;
-				cout <<temp_out1[651][42][3]<< endl;
-				cout <<temp_out1[652][42][3]<< endl;
-				cout <<temp_out1[700][42][3]<< endl;
-				cout <<temp_out1[650][42][3]<< endl;
-				cout <<temp_out1[651][0][0]<< endl;
-			    cout <<temp_out1[650][0][0]<< endl;
-
-			    cout <<temp_out1[1358][42][4]<< endl;
-			    cout <<temp_out1[1358][42][3]<< endl;
-			    cout <<temp_out1[1358][0][0]<< endl;
-			    cout <<temp_out1[1502][0][0]<< endl;
-			    cout <<temp_out1[1502][42][3]<< endl;
-
-			    cout <<temp_out1[1940][42][4]<< endl;
-			    cout <<temp_out1[1940][42][3]<< endl;
-			    cout <<temp_out1[1940][0][0]<< endl;
-			    cout <<temp_out1[1941][0][0]<< endl;
-			    cout <<temp_out1[1941][42][4]<< endl;
-			    cout <<temp_out1[2000][0][0]<< endl;
-
-				cout <<temp_out1[2707][0][0]<< endl;
-				cout <<temp_out1[2707][40][3]<< endl;
-				cout <<temp_out1[2707][41][2]<< endl;
-				cout <<temp_out1[2707][42][4]<< endl;
-				cout <<temp_out1[2][0][0]<< endl;
-				cout <<temp_out1[1000][40][5]<< endl;
-				cout <<temp_out1[653][0][0]<< endl;
-
+	
                 ofstream dataFile;
-				dataFile.open("/mnt/ccnas2/bdp/zw4520/data2/out2.csv");
+				dataFile.open("/mnt/ccnas2/bdp/zw4520/data2/cora_out.csv");
 
 				for(int j=0;j< hidden;j++)
 					if (j==255)
